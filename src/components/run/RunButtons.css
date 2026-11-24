@@ -1,0 +1,4 @@
+/* "Run on iOS": a plain button with a small device icon before the text. */
+.run-btn { display: inline-flex; align-items: center; gap: 5px; }
+.run-icon { flex: none; color: var(--dim); }
+.run-btn:hover .run-icon { color: var(--foreground); }

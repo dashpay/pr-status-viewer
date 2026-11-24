@@ -1,0 +1,149 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 0;
+  padding: 12px 8px 10px;
+  border-right: 1px solid var(--border);
+  background: color-mix(in srgb, var(--secondary) 45%, var(--card));
+  overflow: hidden;
+}
+
+.sidebar-section { display: flex; flex-direction: column; min-height: 0; }
+/* Only the projects list gives way when the window is short: it scrolls,
+   while the views above, "+ Add project" and the footer keep their size. */
+.sidebar-section { flex: none; }
+.sidebar-projects { flex: 0 1 auto; }
+.sidebar-heading {
+  margin: 0 0 3px;
+  padding: 0 6px;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+.nav-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1px; }
+.nav-scroll { overflow-y: auto; min-height: 0; padding: 2px; margin: -2px; }
+
+.nav-row { position: relative; }
+.nav {
+  appearance: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: 4px 6px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--foreground);
+  font-size: 12px;
+  text-align: left;
+  cursor: default;
+}
+.nav:hover { background: var(--hover); }
+.nav.on { background: var(--secondary); font-weight: 600; }
+.nav-label { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nav .n { flex: none; color: var(--dim); font-family: var(--font-mono); font-size: 11px; font-weight: 400; }
+.nav-warn { flex: none; color: var(--warning); font-size: 11px; }
+
+/* Project rows: a gutter on the left for the areas chevron (kept on every
+   row so names line up), the row itself, and the ⋯ button, which takes the
+   count's place on hover or focus. */
+.project-line { position: relative; }
+.nav-row.project .nav { padding-left: 18px; }
+.nav-disclose {
+  appearance: none;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 1px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--dim);
+  cursor: default;
+}
+.nav-disclose:hover { background: var(--hover); color: var(--foreground); }
+.nav-disclose svg { transition: transform 0.12s ease; }
+.nav-disclose[aria-expanded="true"] svg { transform: rotate(90deg); }
+
+/* "2 off": some areas of this project are switched off. */
+.nav-filter {
+  flex: none;
+  padding: 0 4px;
+  border: 1px dashed var(--dim);
+  border-radius: var(--radius-sm);
+  color: var(--dim);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 13px;
+  white-space: nowrap;
+}
+
+.nav-more {
+  appearance: none;
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--dim);
+  font-size: 13px;
+  line-height: 1;
+  cursor: default;
+  opacity: 0;
+}
+.nav-more:hover { background: var(--hover); color: var(--foreground); }
+.nav-row.project:hover .nav-more,
+.nav-row.project:focus-within .nav-more,
+.nav-row.project.menu-open .nav-more { opacity: 1; }
+.nav-row.project:hover .nav,
+.nav-row.project:focus-within .nav,
+.nav-row.project.menu-open .nav { padding-right: 28px; }
+.nav-row.project:hover .nav .n,
+.nav-row.project:focus-within .nav .n,
+.nav-row.project.menu-open .nav .n { display: none; }
+
+.nav.add {
+  margin-top: 6px;
+  justify-content: center;
+  color: var(--dim);
+  border: 1px dashed var(--border);
+}
+.nav.add:hover { color: var(--foreground); }
+
+.project-menu { width: 180px; }
+
+.feed {
+  margin-top: auto;
+  flex: none;
+  padding: 8px 6px 0;
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--dim);
+}
+.feed p { margin: 0; overflow-wrap: anywhere; }
+.feed-title { margin: 0; font-size: 11px; font-weight: 600; color: var(--foreground); }
+.feed-degraded { color: var(--warning); }
+.feed-error {
+  color: var(--warning);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

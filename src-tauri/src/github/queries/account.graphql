@@ -1,0 +1,1 @@
+query Account($login: String!) { repositoryOwner(login: $login) { __typename login avatarUrl } }

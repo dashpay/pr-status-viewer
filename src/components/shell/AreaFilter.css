@@ -1,0 +1,59 @@
+/* A project's area checkboxes, indented under its sidebar row. Lives inside
+   the projects list, so a long list scrolls with it and never pushes
+   "+ Add project" or the PastaClaw footer away. */
+.areas {
+  margin: 1px 0 4px 15px;
+  padding: 2px 0 2px 6px;
+  border-left: 1px solid var(--border);
+  font-size: 11.5px;
+}
+
+.areas__actions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 0 4px 2px 2px;
+}
+.areas__actions-label { margin-right: 2px; font-size: 11px; }
+.areas__action {
+  appearance: none;
+  padding: 0 6px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--foreground);
+  font-size: 11px;
+  line-height: 17px;
+  cursor: default;
+}
+.areas__action:hover:not(:disabled) { background: var(--hover); }
+.areas__action:disabled { color: var(--dim); opacity: 0.6; }
+
+.areas__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.areas__opt {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 6px 2px 2px;
+  border-radius: var(--radius-sm);
+  min-width: 0;
+}
+.areas__opt:hover { background: var(--hover); }
+.areas__box {
+  flex: none;
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  accent-color: var(--info);
+}
+.areas__label { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.areas__opt--none .areas__label { font-style: italic; }
+.areas__opt:has(.areas__box:not(:checked)) .areas__label { color: var(--dim); }
+.areas__n { flex: none; color: var(--dim); font-family: var(--font-mono); font-size: 10.5px; }
+
+.areas__note {
+  margin: 2px 6px 2px 2px;
+  font-size: 11px;
+  color: var(--dim);
+  overflow-wrap: anywhere;
+}

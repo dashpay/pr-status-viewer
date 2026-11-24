@@ -1,0 +1,113 @@
+{
+  "data": {
+    "repository": {
+      "squashMergeAllowed": true,
+      "viewerPermission": "ADMIN",
+      "pullRequest": {
+        "number": 5750,
+        "state": "OPEN",
+        "isDraft": false,
+        "headRefOid": "cff4236bac374011900aef76985bee6b48213e8e",
+        "viewerMergeHeadlineText": "feat(platform)!: random token transfer and mint amounts (#5750)",
+        "id": "PR_kwDOGUlHz88AAAABMo4cwA",
+        "baseRefName": "claude/platform-tenderdash-randomness-149e4e",
+        "mergeable": "MERGEABLE",
+        "mergeStateStatus": "UNSTABLE",
+        "isMergeQueueEnabled": false,
+        "reviewThreads": {
+          "totalCount": 21,
+          "pageInfo": {
+            "hasNextPage": false,
+            "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0xN1QxMzozNjoxM1rOuHSccw=="
+          },
+          "nodes": [
+            {
+              "id": "PRRT_fixture_merge_check_unstable_0",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_unstable_1",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_unstable_2",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_unstable_3",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_unstable_4",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_unstable_5",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_unstable_6",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_unstable_7",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_unstable_8",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_unstable_9",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_unstable_10",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_unstable_11",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_unstable_12",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_unstable_13",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_unstable_14",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_unstable_15",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_unstable_16",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_unstable_17",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_unstable_18",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_unstable_19",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_unstable_20",
+              "isResolved": true
+            }
+          ]
+        }
+      }
+    }
+  }
+}

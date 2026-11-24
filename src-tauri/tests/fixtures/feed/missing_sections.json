@@ -1,0 +1,8 @@
+{
+  "schema_version": 2,
+  "data_as_of": "2026-11-21T20:06:01Z",
+  "live": {"active": null, "queued": null, "heads": null, "typical_minutes_by_tier": {"normal": 28.6}, "new_field": [1, 2, 3]},
+  "history": null,
+  "rounds": {"watch": null},
+  "something_new": {"x": 1}
+}

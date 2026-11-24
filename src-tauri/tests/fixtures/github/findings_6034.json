@@ -1,0 +1,310 @@
+{
+  "data": {
+    "rateLimit": {
+      "cost": 1
+    },
+    "p0": {
+      "number": 6034,
+      "reviewThreads": {
+        "pageInfo": {
+          "hasNextPage": false,
+          "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0yMVQxOTo0Njo0OFrOum4y5Q=="
+        },
+        "nodes": [
+          {
+            "id": "PRRT_fixture_6034_0",
+            "comments": {
+              "nodes": [
+                {
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=b75cf39c3cc4 dedupe=e384482555294fe9 -->\n<!-- thepastaclaw-thread-status v1 -->\n> ✅ **Resolved** at `0daf80e5`; see the replies below.\n\n**🔴 Blocking: Normalize typed Kotlin DPNS names before reading or voting**\n\nThe new encoder preserves the input as text; it does not turn a display name into a poll key. `RegisterNameScreen.kt:146…"
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_fixture_6034_1",
+            "comments": {
+              "nodes": [
+                {
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=1fcc3ac17417 dedupe=d04e10bfbea24006 -->\n<!-- thepastaclaw-thread-status v1 -->\n> ✅ **Resolved** at `0daf80e5`; see the replies below.\n\n**🔴 Blocking: Match the Rust wire prefixes by UTF-8 bytes**\n\nSwift’s `String.hasPrefix` compares whole grapheme clusters; the Rust parser consumes a literal leading backslash or `0x…"
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_fixture_6034_2",
+            "comments": {
+              "nodes": [
+                {
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=6c730293e457 dedupe=d3de328920b0cd42 -->\n<!-- thepastaclaw-thread-status v1 -->\n> ⚖️ **Disputed** (left to the maintainers; not blocking) at `1eb5f272`; see the replies below.\n\n**🔴 Blocking: Return reusable poll selectors only when the path is complete and lossless**\n\nSwift and Kotlin document `index_values` as reusable unchanged, but the listing does not establish either completeness o…"
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_fixture_6034_3",
+            "comments": {
+              "nodes": [
+                {
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=8d87c001acae dedupe=879bd27d5e95522e -->\n<!-- thepastaclaw-thread-status v1 -->\n> ✅ **Resolved** at `0daf80e5`; see the replies below.\n\n**🔴 Blocking: Return per-contender counts in tally-only mode**\n\nSwift now exposes `vote_tally` as result type 1 and can decode its JSON object. Drive’s proof verifier returns contender…"
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_fixture_6034_4",
+            "comments": {
+              "nodes": [
+                {
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=1ea4cada07cc dedupe=9cc241f5dd162917 -->\n**🔴 Blocking: Keep DPNS contest addressing and name parsing in Rust**\n\nThe revised DPNS catalog calls choose the DPNS contract, document type, index, and parent in Swift and pass them to the …"
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_fixture_6034_5",
+            "comments": {
+              "nodes": [
+                {
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=ad6f8f90049f dedupe=460b4fa8c054c55d -->\n<!-- thepastaclaw-thread-status v1 -->\n> ✅ **Resolved** at `0daf80e5`; see the replies below.\n\n**🟡 Suggestion: Document the breaking escape rule on all four C exports**\n\nThe native docs still say that only `0x` is special and returned text is verbatim. The same stale input rule appears on …"
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_fixture_6034_6",
+            "comments": {
+              "nodes": [
+                {
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=a5fd98e73b79 dedupe=573dd139cb732082 -->\n<!-- thepastaclaw-thread-status v1 -->\n> ✅ **Resolved** at `1eb5f272`; see the replies below.\n\n**🟡 Suggestion: Exercise the escaped-label round trip through the public FFI**\n\nThis test invokes the formatter and parser directly, so it cannot catch the exported listing assembling the wrong tuple …"
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_fixture_6034_7",
+            "comments": {
+              "nodes": [
+                {
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=e3c4c3ac0b50 dedupe=dabde8afab903f98 -->\n<!-- thepastaclaw-thread-status v1 -->\n> ✅ **Resolved** at `1eb5f272`; see the replies below.\n\n**🟡 Suggestion: Run the paged DPNS listing off the Swift main actor**\n\nMarking this method `async` does not move its synchronous FFI call off `@MainActor`. Rust blocks until the requested pag…"
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_fixture_6034_8",
+            "comments": {
+              "nodes": [
+                {
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=8bf274915636 dedupe=6d48462cfbf1cf6a -->\n**🟡 Suggestion: Run the generic Swift contest lookups on the query queue**\n\nThe revised generic catalog can now send a complete poll key, but this `async` wrapper calls the synchronous network FFI…"
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_fixture_6034_9",
+            "comments": {
+              "nodes": [
+                {
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=84ae3b55e398 dedupe=485e0727b1ed399c -->\n**🟡 Suggestion: Document when vote-state fields are absent**\n\nThe Swift docs group `winner_info` with the tallies, but an open poll can return contender counts without a winner. Lock…"
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_fixture_6034_10",
+            "comments": {
+              "nodes": [
+                {
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=31ab3663fd57 dedupe=834626ebb31518da -->\n**🟡 Suggestion: Include the stacked API changes in the migration notes**\n\nThe breaking-changes section covers the backslash rule, but the full diff also changes the native listing's `id` from ba…"
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_fixture_6034_11",
+            "comments": {
+              "nodes": [
+                {
+                  "author": {
+                    "login": "coderabbitai"
+                  },
+                  "body": "<!-- coderabbit-ai-generated:v1 -->\n\n**<picture><img src=\"https://storage.googleapis.com/coderabbit_public_assets/review-comment-icons-v1/amber-16.svg\" width=\"16\" height=\"16\" align=\"absmiddle\" alt=\"\"></picture> Minor** · **Data Integrity & Integration** · **Heavy lift**\n\n**Keep text index values distinct from byte index values in `index_values`.**\n\n`render_index_value` returns a text label unchanged. `parse_index_value` decodes any `0x`-prefixed string as hex bytes. A contested text label that starts with `0x` therefore fails or targets a different index value when it is passed back to a vote-state query:\n"
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_fixture_6034_12",
+            "comments": {
+              "nodes": [
+                {
+                  "author": {
+                    "login": "QuantumExplorer"
+                  },
+                  "body": "For a kept member this compares `required`, but the byte layout follows `always_required()`."
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_fixture_6034_13",
+            "comments": {
+              "nodes": [
+                {
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=a00000000001 dedupe=aa11bb22cc33dd44 -->\n<!-- thepastaclaw-thread-status v1 -->\n> ✅ **Withdrawn** at `0daf80e5`; see the replies below.\n\n**🟡 Suggestion: Withdrawn by the bot**\n\nBody text."
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_fixture_6034_14",
+            "comments": {
+              "nodes": [
+                {
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=a00000000002 dedupe=aa11bb22cc33dd44 -->\n<!-- thepastaclaw-thread-status v1 -->\n> ✅ **No longer applies** at `0daf80e5`; see the replies below.\n\n**🔴 Blocking: Code moved away**\n\nBody text."
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_fixture_6034_15",
+            "comments": {
+              "nodes": [
+                {
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=a00000000003 dedupe=aa11bb22cc33dd44 -->\n<!-- thepastaclaw-thread-status v1 -->\n> ⏭️ **Deferred** (maintainer decision; not blocking; tracked in https://github.com/dashpay/platform/issues/1) at `0daf80e5`; see the replies below.\n\n**🔴 Blocking: Deferred to a follow-up**\n\nBody text."
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_fixture_6034_16",
+            "comments": {
+              "nodes": [
+                {
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=a00000000004 dedupe=aa11bb22cc33dd44 -->\n<!-- thepastaclaw-thread-status v1 -->\n> ⏸️ **Needs a tracking issue** (not yet deferred) at `0daf80e5`; see the replies below.\n\n**🔴 Blocking: Waiting for a tracking issue**\n\nBody text."
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_fixture_6034_17",
+            "comments": {
+              "nodes": [
+                {
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=a00000000005 dedupe=aa11bb22cc33dd44 -->\n**💬 Nitpick: A small thing**\n\nBody text."
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_fixture_6034_18",
+            "comments": {
+              "nodes": [
+                {
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=a00000000006 dedupe=aa11bb22cc33dd44 -->\n**💬 Critical: An unknown severity word**\n\nBody text."
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_fixture_6034_19",
+            "comments": {
+              "nodes": [
+                {
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=a00000000007 dedupe=aa11bb22cc33dd44 root=cause-7 -->\n<!-- thepastaclaw-thread-status v1 -->\n> ✅ **Resolved** at `0daf80e5`; see the replies below.\n\n**🟡 Suggestion: Has a root id**\n\nBody text."
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_fixture_6034_20",
+            "comments": {
+              "nodes": [
+                {
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=a00000000008 dedupe=aa11bb22cc33dd44 -->\n**🔴 Blocking: Quotes a status lower down**\n\nThe earlier reply said:\n> ✅ **Resolved** at `0daf80e5`\nbut the bug is still there."
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_fixture_6034_21",
+            "comments": {
+              "nodes": [
+                {
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=a00000000009 dedupe=aa11bb22cc33dd44 -->\r\n<!-- thepastaclaw-thread-status v1 -->\r\n> ⚖️ **Disputed** (left to the maintainers; not blocking) at `0daf80e5`; see the replies below.\r\n\r\n**🟡 Suggestion: Windows line endings**\r\n\r\nBody text."
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_fixture_6034_22",
+            "comments": {
+              "nodes": []
+            }
+          }
+        ]
+      }
+    }
+  }
+}

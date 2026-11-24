@@ -1,0 +1,533 @@
+{
+ "data": {
+  "rateLimit": {
+   "cost": 1
+  },
+  "p0": {
+   "number": 1161,
+   "bot": {
+    "nodes": [
+     {
+      "databaseId": 5999557701,
+      "submittedAt": "2026-11-20T21:19:05Z",
+      "body": "<!-- thepastaclaw-review v1 -->\n<!-- thepastaclaw-review-phase v1 phase=final sha=84ec98116b31e4fd9cf54c77f642fb99703e5d55 policy=45e4063a411d5823 -->\n## Final validation — Phase 2 only (no Phase 1 for this repository)\n"
+     },
+     {
+      "databaseId": 6006310021,
+      "submittedAt": "2026-11-21T15:32:52Z",
+      "body": "<!-- thepastaclaw-review v1 -->\n<!-- thepastaclaw-review-phase v1 phase=final sha=93ea53984752383a396208ede794a155ccdab109 policy=45e4063a411d5823 -->\n## Re-review — Final validation — Phase 2 only (no Phase 1 for this repository)\n"
+     },
+     {
+      "databaseId": 6006475141,
+      "submittedAt": "2026-11-21T16:10:06Z",
+      "body": ""
+     },
+     {
+      "databaseId": 6006758808,
+      "submittedAt": "2026-11-21T16:56:59Z",
+      "body": "<!-- thepastaclaw-review v1 -->\n<!-- thepastaclaw-review-phase v1 phase=final sha=17f5a8c29e241fd35b5527ea3ac9b075d7b1ceda policy=45e4063a411d5823 -->\n## Re-review — Final validation — Phase 2 only (no Phase 1 for this repository)\n"
+     },
+     {
+      "databaseId": 6007199969,
+      "submittedAt": "2026-11-21T18:10:35Z",
+      "body": "<!-- thepastaclaw-review v1 -->\n<!-- thepastaclaw-review-phase v1 phase=final sha=24fa0ce333578f9cb620368e4b2b046bd2728e92 policy=45e4063a411d5823 -->\n## Re-review — Final validation — Phase 2 only (no Phase 1 for this repository)\n"
+     },
+     {
+      "databaseId": 6007691520,
+      "submittedAt": "2026-11-21T19:32:04Z",
+      "body": "<!-- thepastaclaw-review v1 -->\n<!-- thepastaclaw-review-phase v1 phase=final sha=b8fe3f05b5fdadb235c1aa411fef18cdefce5ae2 policy=45e4063a411d5823 -->\n## Re-review — Final validation — Phase 2 only (no Phase 1 for this repository)\n\nThis head isolates the five platform artifact downloads and marks a sampled PR with no checks as incomplete. The rollout guide now requires draft-first publication and source-commit verification, but its provenance recipe does not cover every asset type or distinguish builds from the same commit. Release policy tests, Clippy, Test Suite, Platform pin guard, and both Flatpak builds passed; PR Hygiene and PastaClaw review remain pending.\n\n🔴 6 blocking\n\n### 1 finding(s) not shown inline (the lines are not part of this PR's diff)\n\n**🔴 Blocking: Preserve the authorized source and draft identity through weekly publication**\n`.github/workflows/weekly-build.yml:341-355`\n\nThe new guard checks the tag's commit, but `finalize` receives no release ID from the platform publisher. The notes edit, Flatpak upload, and scheduled publication at line 385 each resolve the release by tag. If the draft is replaced without the tag moving, the guard still passes and the finalizer can publish a draft that never received this run's platform packages or fixture. Pass the release action's draft ID through the handoff and require attachment and publication to target that ID. If changes to the fixture step are deferred, link the follow-up that will bind it to the same draft.\n\n<sub>source: `gpt-6.2-sol` (phase2-reviewer: general)</sub>\n\n\n### Still open from earlier rounds (2)\n\n- 🔴 **Blocking**: Keep ordinary agent writes separate from release authority — `docs/ai-design/2026-10-28-ai-writer-access/README.md:104-121` ([thread](https://github.com/dashpay/dash-evo-tool/pull/1161#discussion_r4647856963))\n- 🔴 **Blocking**: Stage non-weekly releases before enabling immutable publication — `.github/workflows/release.yml:862-877` ([thread](https://github.com/dashpay/dash-evo-tool/pull/1161#discussion_r4653823486))\n\n⏸️ **Awaiting tracking link** (1): Verify the release identity before attaching Flatpaks ([thread](https://github.com/dashpay/dash-evo-tool/pull/1161#discussion_r4647856980)). Link an issue on its thread, or ask there and PastaClaw files it.\n\n<details>\n<summary>🤖 Prompt for all review comments with AI agents</summary>\n\n```\nThese findings are from an automated code review (PastaClaw). How to work through them:\n- Verify each finding against the code; fix only what is real, as narrowly as the finding.\n- If a finding is wrong, decline it on its thread in one or two sentences; the bot answers once and stops.\n- To defer one, link a tracking issue on its thread (or reply asking the bot to file one).\n- Suggestions don't block the merge, but most are worth fixing in this PR; judge each on its merits.\n- Keep the PR's scope; don't grow it to satisfy hardening suggestions.\n- Carried items were raised in an earlier round: read the thread first, and don't re-fix what you already fixed, declined or deferred there. Disputed and deferred items are already handled and are not listed.\n\nIn `.github/workflows/weekly-build.yml`:\n- [BLOCKING] .github/workflows/weekly-build.yml:341-355: Preserve the authorized source and draft identity through weekly publication\n  The new guard checks the tag's commit, but `finalize` receives no release ID from the platform publisher. The notes edit, Flatpak upload, and scheduled publication at line 385 each resolve the release by tag. If the draft is replaced without the tag moving, the guard still passes and the finalizer can publish a draft that never received this run's platform packages or fixture. Pass the release action's draft ID through the handoff and require attachment and publication to target that ID. If changes to the fixture step are deferred, link the follow-up that will bind it to the same draft.\n\nIn `docs/ai-design/2026-10-28-ai-writer-access/README.md`:\n- [BLOCKING] docs/ai-design/2026-10-28-ai-writer-access/README.md:113-117: Specify a provenance check for each release asset type\n  The guide gives one required signer for every asset, but `release.yml:820–828` attests only the five platform packages. `flatpak.yml:253–258` uploads bundles without a build attestation, and `migration-fixture-capture.yml:178–197` attests the archive and manifest under a different signer. The documented command therefore rejects legitimate weekly Flatpaks and fixtures. Specify the signer and trusted source for each asset type, distinguishing a fixture capture's workflow commit from the release commit for manual captures. Make Flatpak provenance a rollout prerequisite if the same verification requirement applies to those bundles.\n- [BLOCKING] docs/ai-design/2026-10-28-ai-writer-access/README.md:117-119: Distinguish the authorized build from the authorized commit\n  `--source-digest` rejects a different source commit, not a different run at the same commit. For example, `release.yml` applies a caller-supplied `version_override` before compilation, so two runs at one SHA can produce different bytes with the same filenames and accepted signer. The documented checks cannot distinguish those runs. Limit the claim to builds from a different source commit; if the rollout depends on identifying the intended run, verify the draft asset digests against independently authorized build outputs before publishing.\n- [BLOCKING] docs/ai-design/2026-10-28-ai-writer-access/README.md:104-121: Keep ordinary agent writes separate from release authority\n  (carried; thread: https://github.com/dashpay/dash-evo-tool/pull/1161#discussion_r4647856963)\n\nIn `.github/workflows/release.yml`:\n- [BLOCKING] .github/workflows/release.yml:862-877: Stage non-weekly releases before enabling immutable publication\n  (carried; thread: https://github.com/dashpay/dash-evo-tool/pull/1161#discussion_r4653823486)\n\nIn `.github/workflows/flatpak-release.yml`:\n- [BLOCKING] .github/workflows/flatpak-release.yml:29-35: Verify the release identity before attaching Flatpaks\n  (awaiting a tracking link: link an issue on its thread, or ask there and PastaClaw files it; no code change needed; thread: https://github.com/dashpay/dash-evo-tool/pull/1161#discussion_r4647856980)\n```\n</details>"
+     },
+     {
+      "databaseId": 6008401691,
+      "submittedAt": "2026-11-21T21:48:37Z",
+      "body": ""
+     }
+    ]
+   },
+   "rabbit": {
+    "nodes": [
+     {
+      "databaseId": 5999534631,
+      "submittedAt": "2026-11-20T21:17:11Z",
+      "body": "<!-- coderabbit-ai-generated:v1 -->\n\n**Actionable comments posted: 7**\n"
+     },
+     {
+      "databaseId": 6006554025,
+      "submittedAt": "2026-11-21T16:22:12Z",
+      "body": "<!-- coderabbit-ai-generated:v1 -->\n\n**Actionable comments posted: 2**\n"
+     },
+     {
+      "databaseId": 6006567939,
+      "submittedAt": "2026-11-21T16:26:10Z",
+      "body": ""
+     },
+     {
+      "databaseId": 6007323422,
+      "submittedAt": "2026-11-21T18:41:43Z",
+      "body": ""
+     },
+     {
+      "databaseId": 6007365310,
+      "submittedAt": "2026-11-21T18:48:18Z",
+      "body": "<!-- coderabbit-ai-generated:v1 -->\n\n**Actionable comments posted: 1**\n"
+     },
+     {
+      "databaseId": 6007384740,
+      "submittedAt": "2026-11-21T18:50:35Z",
+      "body": ""
+     },
+     {
+      "databaseId": 6007397576,
+      "submittedAt": "2026-11-21T18:52:03Z",
+      "body": ""
+     },
+     {
+      "databaseId": 6008374811,
+      "submittedAt": "2026-11-21T21:44:51Z",
+      "body": ""
+     }
+    ]
+   },
+   "reviewThreads": {
+    "pageInfo": {
+     "hasNextPage": false,
+     "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0yMVQxOTozMToxN1rOum2fUg=="
+    },
+    "nodes": [
+     {
+      "id": "PRRT_kwDOM8GK3c66LYV0",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4647836968,
+         "author": {
+          "login": "coderabbitai"
+         },
+         "pullRequestReview": {
+          "databaseId": 5999534631
+         },
+         "body": "<!-- coderabbit-ai-generated:v1 -->\n\n**<picture><img></picture> Minor** · **Security & Privacy** · **Quick win**\n\n**The unsigned-bundle check fails open for symlinks that do not resolve to a regular file or directory of the expected kind.**\n\n<!-- cr-indicator-types:potential_issue -->\n<!-- This is an auto-generated reply by CodeRabbit -->\n✅ Addressed in commits 39e8c9a to 17f5a8c"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOM8GK3c66LYV-",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4647836984,
+         "author": {
+          "login": "coderabbitai"
+         },
+         "pullRequestReview": {
+          "databaseId": 5999534631
+         },
+         "body": "<!-- coderabbit-ai-generated:v1 -->\n\n**<picture><img></picture> Major** · **Functional Correctness** · **Quick win**\n\n**Run both suites for bundled build inputs.**\n\n<!-- cr-indicator-types:potential_issue -->\n<!-- This is an auto-generated reply by CodeRabbit -->\n✅ Addressed in commits 39e8c9a to 17f5a8c"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOM8GK3c66LYWE",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4647836995,
+         "author": {
+          "login": "coderabbitai"
+         },
+         "pullRequestReview": {
+          "databaseId": 5999534631
+         },
+         "body": "<!-- coderabbit-ai-generated:v1 -->\n\n**<picture><img></picture> Minor** · **Functional Correctness** · **Quick win**\n\n**`cleanup_plan` cannot see draft releases, so it deletes the tag and leaves the draft.**\n\n<!-- cr-indicator-types:potential_issue -->\n<!-- This is an auto-generated reply by CodeRabbit -->\n✅ Addressed in commits 39e8c9a to 17f5a8c"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOM8GK3c66LYWI",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4647837002,
+         "author": {
+          "login": "coderabbitai"
+         },
+         "pullRequestReview": {
+          "databaseId": 5999534631
+         },
+         "body": "<!-- coderabbit-ai-generated:v1 -->\n\n**<picture><img></picture> Minor** · **Functional Correctness** · **Quick win**\n\n**Isolate the test from inherited Git repository variables.**\n\n<!-- cr-indicator-types:potential_issue -->\n<!-- This is an auto-generated reply by CodeRabbit -->\n✅ Addressed in commits 39e8c9a to 17f5a8c"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOM8GK3c66LYWM",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4647837005,
+         "author": {
+          "login": "coderabbitai"
+         },
+         "pullRequestReview": {
+          "databaseId": 5999534631
+         },
+         "body": "<!-- coderabbit-ai-generated:v1 -->\n\n**<picture><img></picture> Minor** · **Functional Correctness** · **Quick win**\n\n**This assertion can never fail.**\n\n<!-- cr-indicator-types:potential_issue -->\n<!-- This is an auto-generated reply by CodeRabbit -->\n✅ Addressed in commits 39e8c9a to 17f5a8c"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOM8GK3c66LYWR",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4647837011,
+         "author": {
+          "login": "coderabbitai"
+         },
+         "pullRequestReview": {
+          "databaseId": 5999534631
+         },
+         "body": "<!-- coderabbit-ai-generated:v1 -->\n\n**<picture><img></picture> Minor** · **Functional Correctness** · **Quick win**\n\n**Collect the Actions policy details.**\n\n<!-- cr-indicator-types:potential_issue -->\n<!-- This is an auto-generated reply by CodeRabbit -->\n✅ Addressed in commits 39e8c9a to 17f5a8c"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOM8GK3c66LYWV",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4647837018,
+         "author": {
+          "login": "coderabbitai"
+         },
+         "pullRequestReview": {
+          "databaseId": 5999534631
+         },
+         "body": "<!-- coderabbit-ai-generated:v1 -->\n\n**<picture><img></picture> Minor** · **Functional Correctness** · **Quick win**\n\n**Report when no required-check sample is available.**\n\n<!-- cr-indicator-types:potential_issue -->\n<!-- This is an auto-generated reply by CodeRabbit -->\n✅ Addressed in commits 39e8c9a to 17f5a8c"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOM8GK3c66LbKT",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4647856937,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 5999557701
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=5df47100d65b dedupe=0c1a043d3c6cb726 -->\n**🔴 Blocking: Isolate artifact extraction from executable release policy**\n\nThe publisher checks out trusted policy under `release-policy/`, then downloads five named artifacts without setting `path`. The pinned download action extracts each named artifact directly into `GITHUB_WORKSPACE`; the artifact name does not restrict its contents. A compromised build can therefore overwrite the policy script that line 810 runs with a repository-write token, defeating the build/publisher separation. Extract each artifact into its own directory outside the policy checkout, validate the expected files, and attest and publish only those files.\n\n<sub>source: `gpt-6.2-sol` (phase2-reviewer: general)</sub>"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOM8GK3c66LbKc",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4647856949,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 5999557701
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=d4b163090d88 dedupe=2b66c3d1197c29ed -->\n<!-- thepastaclaw-thread-status v1 -->\n> ✅ **Resolved** at `17f5a8c2`; see the replies below.\n\n**🔴 Blocking: Install release targets for the toolchain Cargo uses**\n"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOM8GK3c66LbKi",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4647856958,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 5999557701
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=8db4d84d24c3 dedupe=7a0d474b00cae8dc -->\n<!-- thepastaclaw-thread-status v1 -->\n> ✅ **Resolved** at `17f5a8c2`; see the replies below.\n\n**🔴 Blocking: Look up weekly drafts before choosing tag-only cleanup**\n"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOM8GK3c66LbKm",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4647856963,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 5999557701
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=31b26894ff1d dedupe=42d5dabb24bc3f63 -->\n**🔴 Blocking: Keep ordinary agent writes separate from release authority**\n\nThe proposed upstream `Contents: write` access permits direct release and asset mutations. Branch and tag rules, and withholding Workflows write, do not prevent those API calls. The latest published weeklies report `immutable: false`; enabling immutability for future releases would protect published assets, not drafts, and would require attaching Flatpaks before publication. Make a contribution path without direct upstream release authority, such as fork-based contributions or a ref-scoped broker, a prerequisite for granting the agent write access.\n\n<sub>source: `gpt-6.2-sol` (phase2-reviewer: general)</sub>"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOM8GK3c66LbKr",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4647856971,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 5999557701
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=8c2c6479808b dedupe=be4819ad3872a2de -->\n**🔴 Blocking: Run the required-check classifier from a trusted revision**\n\nThe scope job executes `pr_scope.py` from the PR merge checkout and accepts its output as the reason to skip required Clippy. `tests.yml:53–64` and `:89–92` use the same pattern for required Test Suite and for Platform pin guard. The PR therefore controls the skip decision through an ordinary Python file, even when its author cannot edit workflows. Run the classifier from the event's trusted base commit and use the PR commits only as diff input. Preserve the fallback that runs the suite when trusted classification is unavailable.\n\n<sub>source: `gpt-6.2-sol` (phase2-reviewer: general)</sub>"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOM8GK3c66LbKu",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4647856975,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 5999557701
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=0ac7b6474cdf dedupe=16c8dd60fd548ade -->\n**🔴 Blocking: Authorize reviewed release snapshots, not every reachable commit**\n\n`merge-base --is-ancestor` follows every merge parent. Both the code and rollout treat that as evidence of review, but this repository has non-linear history: a topic-branch commit can pass without its tree ever having appeared on either protected release branch. Restrict eligibility to protected-branch first-parent history or explicitly approved commits, and make sure the workflow requesting signing credentials also comes from a protected revision rather than relying on the `v*` environment rule alone. Add a test for a reachable side-branch commit that was never a release-branch snapshot.\n\n<sub>source: `gpt-6.2-sol` (phase2-reviewer: general)</sub>"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOM8GK3c66LbK0",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4647856980,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 5999557701
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=9f698b6a68e8 dedupe=8f2c5808738c0091 -->\n<!-- thepastaclaw-thread-status v1 -->\n> ⏸️ **Needs a tracking issue** (not yet deferred) at `93ea5398`; see the replies below.\n\n**🔴 Blocking: Verify the release identity before attaching Flatpaks**\n"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOM8GK3c66LbK4",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4647856988,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 5999557701
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=e2773fb0d6af dedupe=60b9b5ad98e1b54e -->\n<!-- thepastaclaw-thread-status v1 -->\n> ✅ **Resolved** at `17f5a8c2`; see the replies below.\n\n**🔴 Blocking: Run required checks when build or lint inputs change**\n"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOM8GK3c66Yf9z",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4653402488,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 6006310021
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=d986087bea1c dedupe=54bee944e702dc68 -->\n**🔴 Blocking: Preserve the authorized source and draft identity through weekly publication**\n\nWeekly pushes its tag before calling this workflow, but this check always passes `--allow-new-tag`, which accepts a missing tag on `v1.0-dev`. A tag deleted during the build therefore does not stop the draft write. The next handoff also loses the source binding: the fixture workflow pairs this run's pinned binary with `Cargo.toml` read by tag, then uploads with `--clobber` by tag before `finalize` rechecks it. A moved tag can thus produce incorrect fixture metadata or redirect the upload before rejection. Require the existing tag for weekly, allow a missing tag only when direct dispatch was explicitly authorized to create one, and carry the authorized SHA and draft release ID through fixture capture, attachment, and finalization.\n\n_Raised on code unchanged since the last review, and confirmed by an independent pass: If a release operator deletes the weekly tag after authorization but before the publication recheck, the job still writes a draft; fixture capture then fails when it reads Cargo.toml by the missing tag, and the new cleanup guard leaves the incomplete draft behind. If a failed fixture job is retried after a newer manual cut reuses the tag, the retry can overwrite the newer draft’s fixture with output from the original run’s binary before finalize rejects the tag mismatch._"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOM8GK3c66ZHpC",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4653638530,
+         "author": {
+          "login": "coderabbitai"
+         },
+         "pullRequestReview": {
+          "databaseId": 6006554025
+         },
+         "body": "<!-- coderabbit-ai-generated:v1 -->\n\n**<picture><img></picture> Major** · **Data Integrity & Integration** · **Heavy lift**\n\n**Move standalone Flatpak attachment before immutable publication.**\n\n<!-- cr-indicator-types:potential_issue -->\n<!-- This is an auto-generated reply by CodeRabbit -->"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOM8GK3c66ZHpE",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4653638533,
+         "author": {
+          "login": "coderabbitai"
+         },
+         "pullRequestReview": {
+          "databaseId": 6006554025
+         },
+         "body": "<!-- coderabbit-ai-generated:v1 -->\n\n**<picture><img></picture> Major** · **Security & Privacy** · **Quick win**\n\n**Bind provenance verification to the expected source commit.**\n\n<!-- cr-indicator-types:potential_issue -->\n<!-- This is an auto-generated reply by CodeRabbit -->\n✅ Addressed in commits 9b226c7 to b8fe3f0"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOM8GK3c66ZkdG",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4653823481,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 6006758808
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=a3089077f5f6 dedupe=9d52b89c27df58c6 -->\n<!-- thepastaclaw-thread-status v1 -->\n> ✅ **Resolved** at `b8fe3f05`; see the replies below.\n\n**🔴 Blocking: Keep build artifacts from overwriting signing-job outputs**\n"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOM8GK3c66ZkdJ",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4653823486,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 6006758808
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=7fe3a8127445 dedupe=d903cf05dec873f1 -->\n**🔴 Blocking: Stage non-weekly releases before enabling immutable publication**\n\nThe rollout requires immutable releases, but a direct dispatch defaults to `draft: false`. The pinned v1 release action creates or updates the release before uploading its files, so the default path publishes before the binaries can be attached. The standalone Flatpak workflow also starts on `release.published`, after an immutable release stops accepting assets. Stage binaries, Flatpaks, and any required migration fixture on a draft before publishing. Preserve the manual weekly path that leaves a completed draft for review.\n\n<sub>source: `gpt-6.2-sol` (phase2-reviewer: general)</sub>"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOM8GK3c66ZkdN",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4653823491,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 6006758808
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=67db1b830bfe dedupe=e636093077e06347 -->\n<!-- thepastaclaw-thread-status v1 -->\n> ✅ **Resolved** at `b8fe3f05`; see the replies below.\n\n**🔴 Blocking: Mark required-check evidence incomplete when a sampled PR has no check contexts**\n"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOM8GK3c66a5LK",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4654374455,
+         "author": {
+          "login": "coderabbitai"
+         },
+         "pullRequestReview": {
+          "databaseId": 6007365310
+         },
+         "body": "<!-- coderabbit-ai-generated:v1 -->\n\n**<picture><img></picture> Major** · **Security & Privacy** · **Heavy lift**\n\n**Rollout prerequisites do not protect existing releases.**\n\n<!-- cr-indicator-types:potential_issue -->\n<!-- This is an auto-generated reply by CodeRabbit -->"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOM8GK3c66bZ9O",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4654592103,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 6007691520
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=6c460e62b5ee dedupe=ad3a16d489fdd284 -->\n**🔴 Blocking: Specify a provenance check for each release asset type**\n\nThe guide gives one required signer for every asset, but `release.yml:820–828` attests only the five platform packages. `flatpak.yml:253–258` uploads bundles without a build attestation, and `migration-fixture-capture.yml:178–197` attests the archive and manifest under a different signer. The documented command therefore rejects legitimate weekly Flatpaks and fixtures. Specify the signer and trusted source for each asset type, distinguishing a fixture capture's workflow commit from the release commit for manual captures. Make Flatpak provenance a rollout prerequisite if the same verification requirement applies to those bundles.\n\n<sub>source: `gpt-6.2-sol` (phase2-reviewer: general)</sub>"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOM8GK3c66bZ9S",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4654592107,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 6007691520
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=5c56dbe80786 dedupe=d083f2d997ddfed2 -->\n**🔴 Blocking: Distinguish the authorized build from the authorized commit**\n\n`--source-digest` rejects a different source commit, not a different run at the same commit. For example, `release.yml` applies a caller-supplied `version_override` before compilation, so two runs at one SHA can produce different bytes with the same filenames and accepted signer. The documented checks cannot distinguish those runs. Limit the claim to builds from a different source commit; if the rollout depends on identifying the intended run, verify the draft asset digests against independently authorized build outputs before publishing.\n\n<sub>source: `gpt-6.2-sol` (phase2-reviewer: general)</sub>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ }
+}

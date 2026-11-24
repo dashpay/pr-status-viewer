@@ -1,0 +1,238 @@
+{
+ "data": {
+  "rateLimit": {
+   "cost": 1
+  },
+  "p0": {
+   "number": 6034,
+   "bot": {
+    "nodes": [
+     {
+      "databaseId": 6004575040,
+      "submittedAt": "2026-11-21T10:17:01Z",
+      "body": "<!-- thepastaclaw-review v1 -->\n<!-- thepastaclaw-review-phase v1 phase=final sha=c54f92d09682b96703d1071fa37f26cabaf2d02e policy=45e4063a411d5823 -->\n## Final validation — Phase 1 + Phase 2\n"
+     },
+     {
+      "databaseId": 6006277308,
+      "submittedAt": "2026-11-21T15:25:31Z",
+      "body": "<!-- thepastaclaw-review v1 -->\n<!-- thepastaclaw-review-phase v1 phase=final sha=0daf80e5b2daf23d87b6fa7bdf1cbdbbcc686b90 policy=45e4063a411d5823 -->\n## Re-review — Final validation — Phase 1 + Phase 2\n"
+     },
+     {
+      "databaseId": 6006564630,
+      "submittedAt": "2026-11-21T16:25:22Z",
+      "body": "<!-- thepastaclaw-review v1 -->\n<!-- thepastaclaw-review-phase v1 phase=final sha=1eb5f2721e09773958b22e5b2133bff0fcfea72e policy=45e4063a411d5823 -->\n## Re-review — Final validation — Phase 1 + Phase 2\n\nAt 1eb5f2721e09773958b22e5b2133bff0fcfea72e, a new regression test verifies that the public FFI can list and read `0xface` as text, and the Swift DPNS listing and vote-state reads now run off the main actor. Rust workspace tests and the Kotlin SDK build and tests passed in CI; Swift SDK build and tests and PR Hygiene were still pending.\n\n🔴 1 blocking | 🟡 3 suggestion(s)\n\n### Still open from earlier rounds (1)\n\n- 🔴 **Blocking**: Keep DPNS contest addressing and name parsing in Rust — `packages/swift-sdk/SwiftExampleApp/SwiftExampleApp/Views/QueryDetailView.swift:469-478` ([thread](https://github.com/dashpay/platform/pull/6034#discussion_r4651948881))\n\n### Disputed — left to maintainers (1)\n\n- 🔴 **Blocking**: Return reusable poll selectors only when the path is complete and lossless — `packages/rs-sdk-ffi/src/contested_resource/queries/resources.rs:243-254` ([thread](https://github.com/dashpay/platform/pull/6034#discussion_r4651948872))\n\n<details>\n<summary>Follow-up candidates (optional) (1)</summary>\n\nNew non-blocking observations on code unchanged since the last full review. No inline threads are opened for them and later reviews do not repeat them: fix forward or track separately if they are worth it.\n\n**🟡 Suggestion: Keep the full-name normalizer private**\n`packages/rs-sdk/src/platform/dpns_usernames/mod.rs:58`\n\nThe FFI now calls the bare-label homograph converter again, so every caller of `normalize_dpns_label` is within this module or its children. Restore the helper's private visibility and describe the optional `.dash` suffix handling directly in the public vote-state method's rustdoc. That keeps the behavior documented without adding a separate public API commitment.\n\n<sub>source: `gpt-6.2-sol` (phase2-reviewer: general, architecture-layering, ffi-engineer, rust-quality)</sub>\n\n</details>\n\n<details>\n<summary>🤖 Prompt for all review comments with AI agents</summary>\n\n```\nThese findings are from an automated code review (PastaClaw). How to work through them:\n- Verify each finding against the code; fix only what is real, as narrowly as the finding.\n- If a finding is wrong, decline it on its thread in one or two sentences; the bot answers once and stops.\n- To defer one, link a tracking issue on its thread (or reply asking the bot to file one).\n- Suggestions don't block the merge, but most are worth fixing in this PR; judge each on its merits.\n- Keep the PR's scope; don't grow it to satisfy hardening suggestions.\n- Carried items were raised in an earlier round: read the thread first, and don't re-fix what you already fixed, declined or deferred there. Disputed and deferred items are already handled and are not listed.\n\nIn `packages/swift-sdk/Sources/SwiftDashSDK/FFI/PlatformQueryExtensions.swift`:\n- [SUGGESTION] packages/swift-sdk/Sources/SwiftDashSDK/FFI/PlatformQueryExtensions.swift:1769-1781: Run the generic Swift contest lookups on the query queue\n  The revised generic catalog can now send a complete poll key, but this `async` wrapper calls the synchronous network FFI inside an `@MainActor` extension. The UI stays blocked while DAPI responds or retries. The generic listing and voters wrappers do the same. Use `performBlockingQuery` to retain the SDK and copy and free the native response off the main actor, while preserving the existing empty-result behavior.\n- [SUGGESTION] packages/swift-sdk/Sources/SwiftDashSDK/FFI/PlatformQueryExtensions.swift:1730-1734: Document when vote-state fields are absent\n  The Swift docs group `winner_info` with the tallies, but an open poll can return contender counts without a winner. Lock and abstain tallies are omitted when not returned, and the native serializer now omits an unread contender `vote_count` instead of writing zero. Document those distinctions in Swift and in Kotlin's raw-JSON API so consumers decode missing values as optional rather than as zero.\n- [SUGGESTION] packages/swift-sdk/Sources/SwiftDashSDK/FFI/PlatformQueryExtensions.swift:1686-1696: Include the stacked API changes in the migration notes\n  The breaking-changes section covers the backslash rule, but the full diff also changes the native listing's `id` from base58 to an encoded index value and `index_values` from a string to a JSON array. Swift callers must replace `startAtValue:` with the index-value bounds and update the vote-state result names and return type from `[[String: Any]]` to `[String: Any]`. Summarize those changes here or link directly to the migration notes in #6033 so callers know which decoders and call sites to update.\n\nIn `packages/swift-sdk/SwiftExampleApp/SwiftExampleApp/Views/QueryDetailView.swift`:\n- [BLOCKING] packages/swift-sdk/SwiftExampleApp/SwiftExampleApp/Views/QueryDetailView.swift:469-478: Keep DPNS contest addressing and name parsing in Rust\n  (carried; thread: https://github.com/dashpay/platform/pull/6034#discussion_r4651948881)\n```\n</details>\n\n<details>\n<summary>Out-of-scope follow-up suggestions (1)</summary>\n\nThese are valid observations, but they are outside this PR's scope and should be handled in separate issues or author/maintainer-requested PRs rather than blocking this review.\n\n- **Distinguish a page subtotal from the Kotlin poll total** — The Kotlin example already summed a single generic vote-state response and labeled it `Total Votes` on the base revision. An open poll with more contenders than the node returns in one page can therefore show a subtotal as the poll-wide total.\n  - Follow-up: Use a complete, proof-verified Rust SDK read for the total, or label the displayed number as a subtotal when only one page was read.\n\n</details>"
+     }
+    ]
+   },
+   "rabbit": {
+    "nodes": []
+   },
+   "reviewThreads": {
+    "pageInfo": {
+     "hasNextPage": false,
+     "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0yMVQxNjoyNToxMVrOumSRQQ=="
+    },
+    "nodes": [
+     {
+      "id": "PRRT_kwDOGUlHz866VAnU",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4651948856,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 6004575040
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=b75cf39c3cc4 dedupe=e384482555294fe9 -->\n<!-- thepastaclaw-thread-status v1 -->\n> ✅ **Resolved** at `0daf80e5`; see the replies below.\n\n**🔴 Blocking: Normalize typed Kotlin DPNS names before reading or voting**\n"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOGUlHz866VAnY",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4651948861,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 6004575040
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=1fcc3ac17417 dedupe=d04e10bfbea24006 -->\n<!-- thepastaclaw-thread-status v1 -->\n> ✅ **Resolved** at `0daf80e5`; see the replies below.\n\n**🔴 Blocking: Match the Rust wire prefixes by UTF-8 bytes**\n"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOGUlHz866VAnf",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4651948872,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 6004575040
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=6c730293e457 dedupe=d3de328920b0cd42 -->\n<!-- thepastaclaw-thread-status v1 -->\n> ⚖️ **Disputed** (left to the maintainers; not blocking) at `1eb5f272`; see the replies below.\n\n**🔴 Blocking: Return reusable poll selectors only when the path is complete and lossless**\n"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOGUlHz866VAnj",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4651948878,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 6004575040
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=8d87c001acae dedupe=879bd27d5e95522e -->\n<!-- thepastaclaw-thread-status v1 -->\n> ✅ **Resolved** at `0daf80e5`; see the replies below.\n\n**🔴 Blocking: Return per-contender counts in tally-only mode**\n"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOGUlHz866VAnm",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4651948881,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 6004575040
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=1ea4cada07cc dedupe=9cc241f5dd162917 -->\n**🔴 Blocking: Keep DPNS contest addressing and name parsing in Rust**\n\nThe revised DPNS catalog calls choose the DPNS contract, document type, index, and parent in Swift and pass them to the generic FFI. The new helper at lines 902–908 also implements case-insensitive `.dash` suffix recognition in the view because the label bridge only performs homograph conversion. The book’s “Where code goes” and “FFI and mobile SDKs hold no business logic” rules put these decisions in Rust. `rs-sdk/src/platform/dpns_usernames/contested_queries.rs` already owns the typed DPNS listing and vote-state addressing, and `normalize_dpns_label` already parses bare and full names. Use the existing DPNS listing export and thin bindings to Rust-owned poll construction and name normalization for the DPNS-specific operations. Keep the generic catalog entries generic.\n\n<sub>source: `gpt-6.2-sol` (phase2-reviewer: general, architecture-layering, ffi-engineer, rust-quality)</sub>"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOGUlHz866VAnq",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4651948886,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 6004575040
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=ad6f8f90049f dedupe=460b4fa8c054c55d -->\n<!-- thepastaclaw-thread-status v1 -->\n> ✅ **Resolved** at `0daf80e5`; see the replies below.\n\n**🟡 Suggestion: Document the breaking escape rule on all four C exports**\n"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOGUlHz866VAnu",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4651948891,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 6004575040
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=a5fd98e73b79 dedupe=573dd139cb732082 -->\n<!-- thepastaclaw-thread-status v1 -->\n> ✅ **Resolved** at `1eb5f272`; see the replies below.\n\n**🟡 Suggestion: Exercise the escaped-label round trip through the public FFI**\n"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOGUlHz866YbmW",
+      "isResolved": true,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4653374500,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 6006277308
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=e3c4c3ac0b50 dedupe=dabde8afab903f98 -->\n<!-- thepastaclaw-thread-status v1 -->\n> ✅ **Resolved** at `1eb5f272`; see the replies below.\n\n**🟡 Suggestion: Run the paged DPNS listing off the Swift main actor**\n"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOGUlHz866ZJE4",
+      "isResolved": false,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4653648187,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 6006564630
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=8bf274915636 dedupe=6d48462cfbf1cf6a -->\n**🟡 Suggestion: Run the generic Swift contest lookups on the query queue**\n\nThe revised generic catalog can now send a complete poll key, but this `async` wrapper calls the synchronous network FFI inside an `@MainActor` extension. The UI stays blocked while DAPI responds or retries. The generic listing and voters wrappers do the same. Use `performBlockingQuery` to retain the SDK and copy and free the native response off the main actor, while preserving the existing empty-result behavior.\n\n<sub>source: `gpt-6.2-sol` (phase2-reviewer: general, architecture-layering, ffi-engineer, rust-quality)</sub>"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOGUlHz866ZJE9",
+      "isResolved": false,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4653648192,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 6006564630
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=84ae3b55e398 dedupe=485e0727b1ed399c -->\n**🟡 Suggestion: Document when vote-state fields are absent**\n\nThe Swift docs group `winner_info` with the tallies, but an open poll can return contender counts without a winner. Lock and abstain tallies are omitted when not returned, and the native serializer now omits an unread contender `vote_count` instead of writing zero. Document those distinctions in Swift and in Kotlin's raw-JSON API so consumers decode missing values as optional rather than as zero.\n\n<sub>source: `gpt-6.2-sol` (phase2-reviewer: general)</sub>"
+        }
+       ]
+      }
+     },
+     {
+      "id": "PRRT_kwDOGUlHz866ZJFB",
+      "isResolved": false,
+      "comments": {
+       "nodes": [
+        {
+         "databaseId": 4653648196,
+         "author": {
+          "login": "thepastaclaw"
+         },
+         "pullRequestReview": {
+          "databaseId": 6006564630
+         },
+         "body": "<!-- thepastaclaw-review v1 finding=31ab3663fd57 dedupe=834626ebb31518da -->\n**🟡 Suggestion: Include the stacked API changes in the migration notes**\n\nThe breaking-changes section covers the backslash rule, but the full diff also changes the native listing's `id` from base58 to an encoded index value and `index_values` from a string to a JSON array. Swift callers must replace `startAtValue:` with the index-value bounds and update the vote-state result names and return type from `[[String: Any]]` to `[String: Any]`. Summarize those changes here or link directly to the migration notes in #6033 so callers know which decoders and call sites to update.\n\n<sub>source: `gpt-6.2-sol` (phase2-reviewer: general, architecture-layering, ffi-engineer, rust-quality)</sub>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,1 @@
+{"data":{"addComment":null},"errors":[{"type":"FORBIDDEN","path":["addComment"],"locations":[{"line":2,"column":3}],"message":"Resource not accessible by personal access token"}]}

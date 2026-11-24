@@ -1,0 +1,1559 @@
+{
+  "data": {
+    "rateLimit": {
+      "cost": 3
+    },
+    "repository": {
+      "nameWithOwner": "dashpay/platform",
+      "squashMergeAllowed": true,
+      "viewerPermission": "ADMIN",
+      "pullRequests": {
+        "totalCount": 127
+      }
+    },
+    "search": {
+      "pageInfo": {
+        "hasNextPage": false,
+        "endCursor": "Y3Vyc29yOjc="
+      },
+      "nodes": [
+        {
+          "number": 6038,
+          "title": "feat(platform): prove the state before and after the block of a state ",
+          "url": "https://github.com/dashpay/platform/pull/6038",
+          "state": "OPEN",
+          "isDraft": false,
+          "additions": 11970,
+          "deletions": 907,
+          "createdAt": "2026-11-21T12:27:48Z",
+          "updatedAt": "2026-11-21T19:56:11Z",
+          "headRefOid": "ce87c4ba91c01d646c7fa966b385ec7e215d90af",
+          "milestone": {
+            "title": "v5.2.0"
+          },
+          "id": "PR_kwDOGUlHz88AAAABQ4WYug",
+          "baseRefName": "v5.2-dev",
+          "mergeable": "MERGEABLE",
+          "mergeStateStatus": "BLOCKED",
+          "isMergeQueueEnabled": false,
+          "reviewThreads": {
+            "totalCount": 48,
+            "pageInfo": {
+              "hasNextPage": false,
+              "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0yMVQxOTo0Njo0OFrOum4y5Q=="
+            },
+            "nodes": [
+              {
+                "id": "PRRT_fixture_6038_0",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_1",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_2",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_3",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_4",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_5",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_6",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_7",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_8",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_9",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_10",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_11",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_12",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_13",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_14",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_15",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_16",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_17",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_18",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_19",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_20",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_21",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_22",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_23",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_24",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_25",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_26",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_27",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_28",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_29",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_30",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_31",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_32",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_33",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_34",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_35",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_36",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_37",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_38",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_39",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_40",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_41",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_42",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_43",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_44",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_45",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_46",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6038_47",
+                "isResolved": true
+              }
+            ]
+          },
+          "reviewDecision": "REVIEW_REQUIRED",
+          "author": {
+            "login": "QuantumExplorer",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/11468583?u=930727883cf15f471e6c4d991d4b39af08738eb2&v=4"
+          },
+          "latestReviews": {
+            "nodes": [
+              {
+                "state": "APPROVED",
+                "submittedAt": "2026-11-21T19:46:54Z",
+                "author": {
+                  "__typename": "User",
+                  "login": "thepastaclaw",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/261708734?u=8d161150d4d4e6970aed3ae493551da8751970df&v=4"
+                }
+              }
+            ]
+          },
+          "reviewRequests": {
+            "nodes": []
+          },
+          "commits": {
+            "nodes": [
+              {
+                "commit": {
+                  "oid": "ce87c4ba91c01d646c7fa966b385ec7e215d90af",
+                  "statusCheckRollup": {
+                    "contexts": {
+                      "pageInfo": {
+                        "hasNextPage": false
+                      },
+                      "nodes": [
+                        {
+                          "__typename": "CheckRun",
+                          "name": "Select compatible runner image",
+                          "status": "COMPLETED",
+                          "conclusion": "SUCCESS",
+                          "title": null,
+                          "startedAt": "2026-11-21T19:53:58Z",
+                          "completedAt": "2026-11-21T19:54:12Z"
+                        },
+                        {
+                          "__typename": "CheckRun",
+                          "name": "NPM release build validation",
+                          "status": "IN_PROGRESS",
+                          "conclusion": null,
+                          "title": null,
+                          "startedAt": "2026-11-21T19:54:15Z",
+                          "completedAt": null
+                        },
+                        {
+                          "__typename": "CheckRun",
+                          "name": "PastaClaw review",
+                          "status": "IN_PROGRESS",
+                          "conclusion": null,
+                          "title": "Reviewing — verifying findings",
+                          "startedAt": "2026-11-21T19:56:07Z",
+                          "completedAt": null
+                        },
+                        {
+                          "__typename": "StatusContext",
+                          "context": "PR Hygiene",
+                          "state": "PENDING",
+                          "description": "waiting-bots: Waiting for bot review - thepastaclaw not yet. Wait for the missing reviews, or a writer can post /skip-bots to proceed without them."
+                        },
+                        {
+                          "__typename": "StatusContext",
+                          "context": "CodeRabbit",
+                          "state": "SUCCESS",
+                          "description": "Review completed"
+                        },
+                        {
+                          "__typename": "CheckRun",
+                          "name": "PastaClaw review",
+                          "status": "COMPLETED",
+                          "conclusion": "FAILURE",
+                          "title": "Changes requested",
+                          "startedAt": "2026-11-01T00:00:00Z",
+                          "completedAt": "2026-11-01T00:30:00Z"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "number": 6034,
+          "title": "fix(sdk)!: pass contested index text values starting with 0x as text",
+          "url": "https://github.com/dashpay/platform/pull/6034",
+          "state": "OPEN",
+          "isDraft": false,
+          "additions": 1332,
+          "deletions": 350,
+          "createdAt": "2026-11-21T09:47:31Z",
+          "updatedAt": "2026-11-21T16:27:06Z",
+          "headRefOid": "1eb5f2721e09773958b22e5b2133bff0fcfea72e",
+          "milestone": {
+            "title": "v5.1.0"
+          },
+          "id": "PR_kwDOGUlHz88AAAABQ3LZqg",
+          "baseRefName": "v5.1-dev",
+          "mergeable": "MERGEABLE",
+          "mergeStateStatus": "BLOCKED",
+          "isMergeQueueEnabled": false,
+          "reviewThreads": {
+            "totalCount": 11,
+            "pageInfo": {
+              "hasNextPage": false,
+              "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0yMVQxNjoyNToxMVrOumSRQQ=="
+            },
+            "nodes": [
+              {
+                "id": "PRRT_fixture_6034_0",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6034_1",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6034_2",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6034_3",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6034_4",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6034_5",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6034_6",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6034_7",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6034_8",
+                "isResolved": false
+              },
+              {
+                "id": "PRRT_fixture_6034_9",
+                "isResolved": false
+              },
+              {
+                "id": "PRRT_fixture_6034_10",
+                "isResolved": false
+              }
+            ]
+          },
+          "reviewDecision": null,
+          "author": {
+            "login": "QuantumExplorer",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/11468583?u=930727883cf15f471e6c4d991d4b39af08738eb2&v=4"
+          },
+          "latestReviews": {
+            "nodes": [
+              {
+                "state": "CHANGES_REQUESTED",
+                "submittedAt": "2026-11-21T16:25:22Z",
+                "author": {
+                  "__typename": "User",
+                  "login": "thepastaclaw",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/261708734?u=8d161150d4d4e6970aed3ae493551da8751970df&v=4"
+                }
+              }
+            ]
+          },
+          "reviewRequests": {
+            "nodes": []
+          },
+          "commits": {
+            "nodes": [
+              {
+                "commit": {
+                  "oid": "1eb5f2721e09773958b22e5b2133bff0fcfea72e",
+                  "statusCheckRollup": {
+                    "contexts": {
+                      "pageInfo": {
+                        "hasNextPage": false
+                      },
+                      "nodes": [
+                        {
+                          "__typename": "CheckRun",
+                          "name": "Select compatible runner image",
+                          "status": "COMPLETED",
+                          "conclusion": "SUCCESS",
+                          "title": null,
+                          "startedAt": "2026-11-21T15:41:57Z",
+                          "completedAt": "2026-11-21T15:42:14Z"
+                        },
+                        {
+                          "__typename": "CheckRun",
+                          "name": "Build Docker images",
+                          "status": "COMPLETED",
+                          "conclusion": "SKIPPED",
+                          "title": null,
+                          "startedAt": "2026-11-21T15:46:57Z",
+                          "completedAt": "2026-11-21T15:46:57Z"
+                        },
+                        {
+                          "__typename": "CheckRun",
+                          "name": "PastaClaw review",
+                          "status": "COMPLETED",
+                          "conclusion": "FAILURE",
+                          "title": "Changes requested",
+                          "startedAt": "2026-11-21T15:37:30Z",
+                          "completedAt": "2026-11-21T16:25:27Z"
+                        },
+                        {
+                          "__typename": "StatusContext",
+                          "context": "PR Hygiene",
+                          "state": "PENDING",
+                          "description": "waiting-self-review: Your move: thepastaclaw requested changes on this head; dismiss the review or push a fix."
+                        },
+                        {
+                          "__typename": "StatusContext",
+                          "context": "CodeRabbit",
+                          "state": "SUCCESS",
+                          "description": "Review completed"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "number": 6022,
+          "title": "fix(sdk): read document history on a network below protocol version 15",
+          "url": "https://github.com/dashpay/platform/pull/6022",
+          "state": "OPEN",
+          "isDraft": false,
+          "additions": 1111,
+          "deletions": 192,
+          "createdAt": "2026-11-21T03:23:03Z",
+          "updatedAt": "2026-11-21T18:07:18Z",
+          "headRefOid": "81d58b87928663c74729412c69373f7e3d3398b3",
+          "milestone": {
+            "title": "  v5.1.0 "
+          },
+          "id": "PR_kwDOGUlHz88AAAABQ0hWKQ",
+          "baseRefName": "v5.1-dev",
+          "mergeable": "MERGEABLE",
+          "mergeStateStatus": "CLEAN",
+          "isMergeQueueEnabled": false,
+          "reviewThreads": {
+            "totalCount": 25,
+            "pageInfo": {
+              "hasNextPage": false,
+              "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0yMVQxODowNDoyNlrOumoCmA=="
+            },
+            "nodes": [
+              {
+                "id": "PRRT_fixture_6022_0",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6022_1",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6022_2",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6022_3",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6022_4",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6022_5",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6022_6",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6022_7",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6022_8",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6022_9",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6022_10",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6022_11",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6022_12",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6022_13",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6022_14",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6022_15",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6022_16",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6022_17",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6022_18",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6022_19",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_6022_20",
+                "isResolved": false
+              },
+              {
+                "id": "PRRT_fixture_6022_21",
+                "isResolved": false
+              },
+              {
+                "id": "PRRT_fixture_6022_22",
+                "isResolved": false
+              },
+              {
+                "id": "PRRT_fixture_6022_23",
+                "isResolved": false
+              },
+              {
+                "id": "PRRT_fixture_6022_24",
+                "isResolved": false
+              }
+            ]
+          },
+          "reviewDecision": null,
+          "author": {
+            "login": "QuantumExplorer",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/11468583?u=930727883cf15f471e6c4d991d4b39af08738eb2&v=4"
+          },
+          "latestReviews": {
+            "nodes": [
+              {
+                "state": "COMMENTED",
+                "submittedAt": "2026-11-21T17:51:11Z",
+                "author": {
+                  "__typename": "Bot",
+                  "login": "coderabbitai",
+                  "avatarUrl": "https://avatars.githubusercontent.com/in/347564?v=4"
+                }
+              },
+              {
+                "state": "COMMENTED",
+                "submittedAt": "2026-11-21T18:07:13Z",
+                "author": {
+                  "__typename": "User",
+                  "login": "thepastaclaw",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/261708734?u=8d161150d4d4e6970aed3ae493551da8751970df&v=4"
+                }
+              }
+            ]
+          },
+          "reviewRequests": {
+            "nodes": []
+          },
+          "commits": {
+            "nodes": [
+              {
+                "commit": {
+                  "oid": "81d58b87928663c74729412c69373f7e3d3398b3",
+                  "statusCheckRollup": {
+                    "contexts": {
+                      "pageInfo": {
+                        "hasNextPage": false
+                      },
+                      "nodes": [
+                        {
+                          "__typename": "CheckRun",
+                          "name": "assign-milestone",
+                          "status": "COMPLETED",
+                          "conclusion": "SUCCESS",
+                          "title": null,
+                          "startedAt": "2026-11-21T17:45:38Z",
+                          "completedAt": "2026-11-21T17:45:44Z"
+                        },
+                        {
+                          "__typename": "CheckRun",
+                          "name": "ARM64 runner image validation",
+                          "status": "COMPLETED",
+                          "conclusion": "SKIPPED",
+                          "title": null,
+                          "startedAt": "2026-11-21T17:43:20Z",
+                          "completedAt": "2026-11-21T17:43:20Z"
+                        },
+                        {
+                          "__typename": "CheckRun",
+                          "name": "Rust wasm32 tests / Rust wasm32 tests",
+                          "status": "COMPLETED",
+                          "conclusion": "CANCELLED",
+                          "title": null,
+                          "startedAt": "2026-11-21T17:43:22Z",
+                          "completedAt": "2026-11-21T18:38:23Z"
+                        },
+                        {
+                          "__typename": "CheckRun",
+                          "name": "Dashmate E2E tests (Local network, test/e2e/localNetwork.spec.js, true) / Run Local network tests",
+                          "status": "COMPLETED",
+                          "conclusion": "FAILURE",
+                          "title": null,
+                          "startedAt": "2026-11-21T17:58:01Z",
+                          "completedAt": "2026-11-21T18:06:47Z"
+                        },
+                        {
+                          "__typename": "StatusContext",
+                          "context": "PR Hygiene",
+                          "state": "PENDING",
+                          "description": "waiting-self-review: Bots are done - your move: post /self-reviewed."
+                        },
+                        {
+                          "__typename": "CheckRun",
+                          "name": "PastaClaw review",
+                          "status": "COMPLETED",
+                          "conclusion": "NEUTRAL",
+                          "title": "Reviewed — comments, no changes requested",
+                          "startedAt": "2026-11-21T17:40:25Z",
+                          "completedAt": "2026-11-21T18:07:15Z"
+                        },
+                        {
+                          "__typename": "StatusContext",
+                          "context": "CodeRabbit",
+                          "state": "SUCCESS",
+                          "description": "Review completed"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "number": 6002,
+          "title": "fix(dashmate): run an added local node on its network's Core image",
+          "url": "https://github.com/dashpay/platform/pull/6002",
+          "state": "OPEN",
+          "isDraft": false,
+          "additions": 100,
+          "deletions": 7,
+          "createdAt": "2026-11-19T22:12:51Z",
+          "updatedAt": "2026-11-21T06:26:50Z",
+          "headRefOid": "9cc7778487200a5f379f0cb47cfff854e1a520dd",
+          "milestone": null,
+          "id": "PR_kwDOGUlHz88AAAABQhhYvw",
+          "baseRefName": "v5.1-dev",
+          "mergeable": "MERGEABLE",
+          "mergeStateStatus": "CLEAN",
+          "isMergeQueueEnabled": false,
+          "reviewThreads": {
+            "totalCount": 0,
+            "pageInfo": {
+              "hasNextPage": false,
+              "endCursor": null
+            },
+            "nodes": []
+          },
+          "reviewDecision": null,
+          "author": {
+            "login": "QuantumExplorer",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/11468583?u=930727883cf15f471e6c4d991d4b39af08738eb2&v=4"
+          },
+          "latestReviews": {
+            "nodes": [
+              {
+                "state": "APPROVED",
+                "submittedAt": "2026-11-20T10:00:00Z",
+                "author": {
+                  "__typename": "User",
+                  "login": "shumkov",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/24296?v=4"
+                }
+              },
+              {
+                "state": "APPROVED",
+                "submittedAt": "2026-11-19T22:36:19Z",
+                "author": {
+                  "__typename": "User",
+                  "login": "thepastaclaw",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/261708734?u=8d161150d4d4e6970aed3ae493551da8751970df&v=4"
+                }
+              }
+            ]
+          },
+          "reviewRequests": {
+            "nodes": [
+              {
+                "requestedReviewer": {
+                  "__typename": "Team",
+                  "slug": "platform-reviewers",
+                  "organization": {
+                    "login": "dashpay"
+                  }
+                }
+              }
+            ]
+          },
+          "commits": {
+            "nodes": [
+              {
+                "commit": {
+                  "oid": "9cc7778487200a5f379f0cb47cfff854e1a520dd",
+                  "statusCheckRollup": {
+                    "contexts": {
+                      "pageInfo": {
+                        "hasNextPage": false
+                      },
+                      "nodes": [
+                        {
+                          "__typename": "CheckRun",
+                          "name": "assign-milestone",
+                          "status": "COMPLETED",
+                          "conclusion": "SUCCESS",
+                          "title": null,
+                          "startedAt": "2026-11-19T22:12:57Z",
+                          "completedAt": "2026-11-19T22:13:04Z"
+                        },
+                        {
+                          "__typename": "CheckRun",
+                          "name": "Rust workspace tests",
+                          "status": "COMPLETED",
+                          "conclusion": "SKIPPED",
+                          "title": null,
+                          "startedAt": "2026-11-19T22:13:56Z",
+                          "completedAt": "2026-11-19T22:13:55Z"
+                        },
+                        {
+                          "__typename": "StatusContext",
+                          "context": "PR Hygiene",
+                          "state": "PENDING",
+                          "description": "ready-for-human: Ready for review - files with no dedicated owner: QuantumExplorer or shumkov | dpp: QuantumExplorer or shumkov"
+                        },
+                        {
+                          "__typename": "StatusContext",
+                          "context": "CodeRabbit",
+                          "state": "SUCCESS",
+                          "description": "Review completed"
+                        },
+                        {
+                          "__typename": "CheckRun",
+                          "name": "PastaClaw review",
+                          "status": "COMPLETED",
+                          "conclusion": "SUCCESS",
+                          "title": "Approved",
+                          "startedAt": "2026-11-19T22:16:04Z",
+                          "completedAt": "2026-11-19T22:36:20Z"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "number": 5967,
+          "title": "feat(sdk): host apps can prepare an identity's shielded account",
+          "url": "https://github.com/dashpay/platform/pull/5967",
+          "state": "OPEN",
+          "isDraft": true,
+          "additions": 787,
+          "deletions": 0,
+          "createdAt": "2026-11-17T16:09:23Z",
+          "updatedAt": "2026-11-17T17:25:43Z",
+          "headRefOid": "09920e114fb6ee61cd00b1f1472c2246775116fc",
+          "id": "PR_kwDOGUlHz88AAAABP4H5lw",
+          "baseRefName": "v5.1-dev",
+          "mergeable": "MERGEABLE",
+          "mergeStateStatus": "BLOCKED",
+          "isMergeQueueEnabled": false,
+          "reviewThreads": {
+            "totalCount": 4,
+            "pageInfo": {
+              "hasNextPage": false,
+              "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0xN1QxNjo0NzowN1rOuIvWQg=="
+            },
+            "nodes": [
+              {
+                "id": "PRRT_fixture_5967_0",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5967_1",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5967_2",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5967_3",
+                "isResolved": true
+              }
+            ]
+          },
+          "reviewDecision": null,
+          "author": {
+            "login": "QuantumExplorer",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/11468583?u=930727883cf15f471e6c4d991d4b39af08738eb2&v=4"
+          },
+          "latestReviews": {
+            "nodes": [
+              {
+                "state": "APPROVED",
+                "submittedAt": "2026-11-17T16:47:07Z",
+                "author": {
+                  "__typename": "User",
+                  "login": "thepastaclaw",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/261708734?u=8d161150d4d4e6970aed3ae493551da8751970df&v=4"
+                }
+              }
+            ]
+          },
+          "reviewRequests": {
+            "nodes": []
+          },
+          "commits": {
+            "nodes": [
+              {
+                "commit": {
+                  "oid": "09920e114fb6ee61cd00b1f1472c2246775116fc",
+                  "statusCheckRollup": {
+                    "contexts": {
+                      "pageInfo": {
+                        "hasNextPage": false
+                      },
+                      "nodes": [
+                        {
+                          "__typename": "CheckRun",
+                          "name": "assign-milestone",
+                          "status": "COMPLETED",
+                          "conclusion": "SUCCESS",
+                          "title": null,
+                          "startedAt": "2026-11-17T16:59:29Z",
+                          "completedAt": "2026-11-17T16:59:34Z"
+                        },
+                        {
+                          "__typename": "CheckRun",
+                          "name": "Build JS packages",
+                          "status": "COMPLETED",
+                          "conclusion": "SKIPPED",
+                          "title": null,
+                          "startedAt": "2026-11-17T16:59:57Z",
+                          "completedAt": "2026-11-17T16:59:57Z"
+                        },
+                        {
+                          "__typename": "CheckRun",
+                          "name": "PastaClaw review",
+                          "status": "COMPLETED",
+                          "conclusion": "CANCELLED",
+                          "title": "Not reviewed: the PR is a draft",
+                          "startedAt": "2026-11-17T17:00:26Z",
+                          "completedAt": "2026-11-17T17:22:08Z"
+                        },
+                        {
+                          "__typename": "StatusContext",
+                          "context": "PR Hygiene",
+                          "state": "PENDING",
+                          "description": "draft: The pull request is a draft; mark it ready for review to continue."
+                        },
+                        {
+                          "__typename": "StatusContext",
+                          "context": "CodeRabbit",
+                          "state": "SUCCESS",
+                          "description": "Review completed"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "number": 5113,
+          "title": "feat(platform-wallet)!: keep masternode collateral out of coin selecti",
+          "url": "https://github.com/dashpay/platform/pull/5113",
+          "state": "OPEN",
+          "isDraft": true,
+          "additions": 3055,
+          "deletions": 45,
+          "createdAt": "2026-09-28T06:02:07Z",
+          "updatedAt": "2026-11-12T15:54:03Z",
+          "headRefOid": "b5c401dc01d5412c0c2c57f0a8f165e41d0d28f4",
+          "id": "PR_kwDOGUlHz88AAAABFcBInA",
+          "baseRefName": "chore/bump-rust-dashcore-secp-033",
+          "mergeable": "CONFLICTING",
+          "mergeStateStatus": "DIRTY",
+          "isMergeQueueEnabled": false,
+          "reviewThreads": {
+            "totalCount": 130,
+            "pageInfo": {
+              "hasNextPage": true,
+              "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0yMFQxMDowMDowMFrOAAAAZA=="
+            },
+            "nodes": [
+              {
+                "id": "PRRT_fixture_5113_0",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_1",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_2",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_3",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_4",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_5",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_6",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_7",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_8",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_9",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_10",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_11",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_12",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_13",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_14",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_15",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_16",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_17",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_18",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_19",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_20",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_21",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_22",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_23",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_24",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_25",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_26",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_27",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_28",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_29",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_30",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_31",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_32",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_33",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_34",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_35",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_36",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_37",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_38",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_39",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_40",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_41",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_42",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_43",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_44",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_45",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_46",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_47",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_48",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_49",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_50",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_51",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_52",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_53",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_54",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_55",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_56",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_57",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_58",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_59",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_60",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_61",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_62",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_63",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_64",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_65",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_66",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_67",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_68",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_69",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_70",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_71",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_72",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_73",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_74",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_75",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_76",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_77",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_78",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_79",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_80",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_81",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_82",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_83",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_84",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_85",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_86",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_87",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_88",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_89",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_90",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_91",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_92",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_93",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_94",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_95",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_96",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_97",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_98",
+                "isResolved": true
+              },
+              {
+                "id": "PRRT_fixture_5113_99",
+                "isResolved": true
+              }
+            ]
+          },
+          "reviewDecision": null,
+          "author": {
+            "login": "QuantumExplorer",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/11468583?u=930727883cf15f471e6c4d991d4b39af08738eb2&v=4"
+          },
+          "latestReviews": {
+            "nodes": []
+          },
+          "reviewRequests": {
+            "nodes": []
+          },
+          "commits": {
+            "nodes": [
+              {
+                "commit": {
+                  "oid": "b5c401dc01d5412c0c2c57f0a8f165e41d0d28f4",
+                  "statusCheckRollup": {
+                    "contexts": {
+                      "pageInfo": {
+                        "hasNextPage": false
+                      },
+                      "nodes": [
+                        {
+                          "__typename": "CheckRun",
+                          "name": "Kotlin SDK build + tests (x86_64 emulator)",
+                          "status": "COMPLETED",
+                          "conclusion": "FAILURE",
+                          "title": null,
+                          "startedAt": "2026-09-28T20:56:23Z",
+                          "completedAt": "2026-09-28T20:57:27Z"
+                        },
+                        {
+                          "__typename": "CheckRun",
+                          "name": "assign-milestone",
+                          "status": "COMPLETED",
+                          "conclusion": "SUCCESS",
+                          "title": null,
+                          "startedAt": "2026-09-28T20:58:14Z",
+                          "completedAt": "2026-09-28T20:58:17Z"
+                        },
+                        {
+                          "__typename": "StatusContext",
+                          "context": "CodeRabbit",
+                          "state": "SUCCESS",
+                          "description": "Review completed"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "number": 4776,
+          "title": "feat(platform-wallet)!: let contract updates clear the description thr",
+          "url": "https://github.com/dashpay/platform/pull/4776",
+          "state": "OPEN",
+          "isDraft": false,
+          "additions": 175,
+          "deletions": 27,
+          "createdAt": "2026-09-16T11:40:06Z",
+          "updatedAt": "2026-11-12T15:55:22Z",
+          "headRefOid": "545590226954702bc71de86d32d7fc9eaf1e74e1",
+          "id": "PR_kwDOGUlHz88AAAABDwgpWQ",
+          "baseRefName": "feat/delta-contract-update-pv15",
+          "mergeable": "CONFLICTING",
+          "mergeStateStatus": "DIRTY",
+          "isMergeQueueEnabled": false,
+          "reviewThreads": {
+            "totalCount": 1,
+            "pageInfo": {
+              "hasNextPage": false,
+              "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0wOS0xNlQxODoyMzoyNVrOow-bZg=="
+            },
+            "nodes": [
+              {
+                "id": "PRRT_fixture_4776_0",
+                "isResolved": true
+              }
+            ]
+          },
+          "reviewDecision": null,
+          "author": {
+            "login": "QuantumExplorer",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/11468583?u=930727883cf15f471e6c4d991d4b39af08738eb2&v=4"
+          },
+          "latestReviews": {
+            "nodes": [
+              {
+                "state": "COMMENTED",
+                "submittedAt": "2026-09-18T11:01:34Z",
+                "author": {
+                  "__typename": "User",
+                  "login": "thepastaclaw",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/261708734?u=8d161150d4d4e6970aed3ae493551da8751970df&v=4"
+                }
+              }
+            ]
+          },
+          "reviewRequests": {
+            "nodes": [
+              {
+                "requestedReviewer": {
+                  "__typename": "User",
+                  "login": "HashEngineering",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/5956129?u=affb3b9842d99091145619b8a2594adfdf8ac092&v=4"
+                }
+              },
+              {
+                "requestedReviewer": {
+                  "__typename": "User",
+                  "login": "llbartekll",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/25840476?u=70090c2ac3ef4575b9158da5c5b9d57951aa9ad5&v=4"
+                }
+              },
+              {
+                "requestedReviewer": {
+                  "__typename": "Bot",
+                  "login": "coderabbitai",
+                  "avatarUrl": "https://avatars.githubusercontent.com/in/347564?v=4"
+                }
+              }
+            ]
+          },
+          "commits": {
+            "nodes": [
+              {
+                "commit": {
+                  "oid": "545590226954702bc71de86d32d7fc9eaf1e74e1",
+                  "statusCheckRollup": {
+                    "contexts": {
+                      "pageInfo": {
+                        "hasNextPage": false
+                      },
+                      "nodes": [
+                        {
+                          "__typename": "CheckRun",
+                          "name": "Kotlin SDK build + tests (x86_64 emulator)",
+                          "status": "COMPLETED",
+                          "conclusion": "SUCCESS",
+                          "title": null,
+                          "startedAt": "2026-09-18T01:23:39Z",
+                          "completedAt": "2026-09-18T01:27:10Z"
+                        },
+                        {
+                          "__typename": "StatusContext",
+                          "context": "PR Hygiene",
+                          "state": "SUCCESS",
+                          "description": "ready-to-merge"
+                        },
+                        {
+                          "__typename": "CheckRun",
+                          "name": "PastaClaw review",
+                          "status": "COMPLETED",
+                          "conclusion": "NEUTRAL",
+                          "title": "Reviewed — comments, no changes requested",
+                          "startedAt": "2026-09-18T11:01:34Z",
+                          "completedAt": "2026-09-18T11:01:34Z"
+                        },
+                        {
+                          "__typename": "StatusContext",
+                          "context": "CodeRabbit",
+                          "state": "ERROR",
+                          "description": "Review failed"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

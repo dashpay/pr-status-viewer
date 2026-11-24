@@ -1,0 +1,39 @@
+/* Design tokens. Every colour, radius and font in the app comes from here.
+   Light is the default; dark follows the system. */
+:root {
+  color-scheme: light dark;
+  --background: #f5f5f7;
+  --card: #ffffff;
+  --secondary: #eeeef1;
+  --border: #dfdfe4;
+  --foreground: #1b1c1f;
+  --dim: #63656d;
+  --info: #1f6feb;
+  --success: #17804a;
+  --destructive: #c9302c;
+  --warning: #9a6200;
+  --track: color-mix(in srgb, var(--foreground) 12%, transparent);
+  --hover: color-mix(in srgb, var(--foreground) 5%, transparent);
+  --selected: color-mix(in srgb, var(--info) 8%, transparent);
+  --focus-ring: color-mix(in srgb, var(--info) 60%, transparent);
+  --radius: 10px;
+  --radius-sm: 6px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Cantarell", "Ubuntu", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", "DejaVu Sans Mono", Menlo, monospace;
+  --sidebar-width: 208px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0e0f11;
+    --card: #17181b;
+    --secondary: #212327;
+    --border: #2b2d33;
+    --foreground: #ececee;
+    --dim: #9a9ca4;
+    --info: #5b9dff;
+    --success: #3fb97a;
+    --destructive: #f2635f;
+    --warning: #e0a23a;
+  }
+}

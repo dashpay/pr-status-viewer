@@ -1,0 +1,17 @@
+{
+  "devices" : {
+    "com.apple.CoreSimulator.SimRuntime.iOS-17-5" : [
+      { "udid" : "AAAA0000-0000-0000-0000-000000000001", "isAvailable" : true, "deviceTypeIdentifier" : "com.apple.CoreSimulator.SimDeviceType.iPhone-15", "state" : "Shutdown", "name" : "iPhone 15" },
+      { "udid" : "AAAA0000-0000-0000-0000-000000000002", "isAvailable" : true, "deviceTypeIdentifier" : "com.apple.CoreSimulator.SimDeviceType.iPad-Air-11-inch-M2", "state" : "Booted", "name" : "iPad Air" }
+    ],
+    "com.apple.CoreSimulator.SimRuntime.iOS-27-2" : [
+      { "udid" : "BBBB0000-0000-0000-0000-000000000001", "isAvailable" : true, "deviceTypeIdentifier" : "com.apple.CoreSimulator.SimDeviceType.iPad-Pro-13-inch-M5", "state" : "Shutdown", "name" : "iPad Pro" },
+      { "udid" : "BBBB0000-0000-0000-0000-000000000002", "isAvailable" : true, "deviceTypeIdentifier" : "com.apple.CoreSimulator.SimDeviceType.iPhone-18", "state" : "Shutdown", "name" : "iPhone 18" },
+      { "udid" : "BBBB0000-0000-0000-0000-000000000003", "isAvailable" : false, "deviceTypeIdentifier" : "com.apple.CoreSimulator.SimDeviceType.iPhone-18", "state" : "Shutdown", "name" : "iPhone 18 broken" },
+      { "udid" : "BBBB0000-0000-0000-0000-000000000004", "isAvailable" : true, "deviceTypeIdentifier" : "com.apple.CoreSimulator.SimDeviceType.Apple-Vision-Pro", "state" : "Shutdown", "name" : "Apple Vision Pro" }
+    ],
+    "com.apple.CoreSimulator.SimRuntime.watchOS-11-0" : [
+      { "udid" : "CCCC0000-0000-0000-0000-000000000001", "isAvailable" : true, "deviceTypeIdentifier" : "com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-10-46mm", "state" : "Booted", "name" : "Apple Watch" }
+    ]
+  }
+}

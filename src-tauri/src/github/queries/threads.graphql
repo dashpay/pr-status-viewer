@@ -1,0 +1,12 @@
+query Threads($id: ID!, $after: String) {
+  rateLimit { cost }
+  node(id: $id) {
+    ... on PullRequest {
+      reviewThreads(first: 100, after: $after) {
+        totalCount
+        pageInfo { hasNextPage endCursor }
+        nodes { id isResolved }
+      }
+    }
+  }
+}

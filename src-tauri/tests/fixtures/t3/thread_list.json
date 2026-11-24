@@ -1,0 +1,198 @@
+[
+  {
+    "threadId": "thread-running",
+    "projectId": "project-1",
+    "title": "Add the widget cache",
+    "link": "https://app.t3.codes/threads/env-1/thread-running",
+    "createdBy": "agent",
+    "creationSource": "mcp",
+    "status": "running",
+    "latestRunId": "run:thread-running:ordinal:4",
+    "providerInstanceId": "provider-1",
+    "model": "model-1",
+    "runtimeMode": "full-access",
+    "interactionMode": "default",
+    "linkedPullRequest": null,
+    "pullRequests": [
+      {
+        "host": "github.com",
+        "repository": "acme/app",
+        "number": 101,
+        "url": "https://github.com/acme/app/pull/101",
+        "source": "created",
+        "state": "open",
+        "watching": true,
+        "watchStartedAt": "2026-11-22T10:00:00.000Z"
+      }
+    ],
+    "pullRequestCount": 1,
+    "openPullRequestCount": 1,
+    "settled": false,
+    "settledAt": null,
+    "snoozed": false,
+    "snoozedUntil": null,
+    "pinned": false,
+    "blockedOnThreadWait": false,
+    "pendingBackgroundTasks": [],
+    "parentThreadId": null,
+    "relationshipToParent": null,
+    "itemCount": 120,
+    "createdAt": "2026-11-22T09:00:00.000Z",
+    "updatedAt": "2026-11-22T12:30:00.000Z"
+  },
+  {
+    "threadId": "thread-waiting",
+    "projectId": "project-1",
+    "title": "Fix the flaky login test",
+    "link": "https://app.t3.codes/threads/env-1/thread-waiting",
+    "createdBy": "user",
+    "creationSource": "web",
+    "status": "waiting",
+    "linkedPullRequest": null,
+    "pullRequests": [
+      {
+        "host": "github.com",
+        "repository": "acme/app",
+        "number": 102,
+        "url": "https://github.com/acme/app/pull/102",
+        "source": "created",
+        "state": "open",
+        "watching": true,
+        "watchStartedAt": "2026-11-22T11:00:00.000Z"
+      }
+    ],
+    "settled": false,
+    "settledAt": null,
+    "blockedOnThreadWait": false,
+    "pendingBackgroundTasks": [
+      {
+        "taskId": "pull-request-watch:github.com/acme/app#102",
+        "kind": "monitor",
+        "description": "Watching pull request #102",
+        "awaited": true
+      }
+    ],
+    "parentThreadId": null,
+    "relationshipToParent": null,
+    "createdAt": "2026-11-22T08:00:00.000Z",
+    "updatedAt": "2026-11-22T12:00:00.000Z"
+  },
+  {
+    "threadId": "thread-idle-pending",
+    "title": "Tidy the error messages",
+    "status": "idle",
+    "pullRequests": [
+      {
+        "host": "github.com",
+        "repository": "acme/app",
+        "number": 103,
+        "url": "https://github.com/acme/app/pull/103",
+        "state": "open",
+        "watching": false
+      }
+    ],
+    "settled": false,
+    "blockedOnThreadWait": true,
+    "pendingBackgroundTasks": [
+      {"taskId": "command:abc", "kind": "command", "description": "npm test", "awaited": false}
+    ],
+    "updatedAt": "2026-11-21T18:00:00.000Z"
+  },
+  {
+    "threadId": "thread-failed",
+    "title": "Bump the parser",
+    "status": "failed",
+    "pullRequests": [
+      {
+        "host": "github.com",
+        "repository": "acme/app",
+        "number": 104,
+        "url": "https://github.com/acme/app/pull/104",
+        "state": "open",
+        "watching": true
+      }
+    ],
+    "settled": false,
+    "updatedAt": "2026-11-21T17:00:00.000Z"
+  },
+  {
+    "threadId": "thread-settled",
+    "title": "Old finished work",
+    "status": "completed",
+    "pullRequests": [
+      {"host": "github.com", "repository": "acme/app", "number": 105, "url": "https://github.com/acme/app/pull/105", "state": "open", "watching": false}
+    ],
+    "settled": true,
+    "settledAt": "2026-11-20T10:00:00.000Z",
+    "updatedAt": "2026-11-20T10:00:00.000Z"
+  },
+  {
+    "threadId": "thread-settled-but-running",
+    "title": "Picked up again",
+    "status": "running",
+    "pullRequests": [
+      {"host": "github.com", "repository": "acme/app", "number": 106, "url": "https://github.com/acme/app/pull/106", "state": "open", "watching": false}
+    ],
+    "settled": true,
+    "settledAt": "2026-11-20T10:00:00.000Z",
+    "updatedAt": "2026-11-22T12:10:00.000Z"
+  },
+  {
+    "threadId": "thread-no-pr",
+    "title": "Just chatting",
+    "status": "waiting",
+    "linkedPullRequest": null,
+    "pullRequests": [],
+    "settled": false,
+    "updatedAt": "2026-11-22T12:20:00.000Z"
+  },
+  {
+    "threadId": "thread-many-prs",
+    "title": "Split the migration",
+    "status": "Queued",
+    "pullRequests": [
+      {"host": "github.com", "repository": "acme/app", "number": 107, "url": "https://github.com/acme/app/pull/107", "watching": false},
+      {"host": "GitHub.com", "repository": "Acme/App", "number": 107, "url": "https://github.com/acme/app/pull/107", "watching": true},
+      {"host": "gitlab.com", "repository": "acme/app", "number": 108, "url": "https://gitlab.com/acme/app/-/merge_requests/108", "watching": true},
+      {"repository": "acme/lib", "number": 9, "url": "https://github.com/acme/lib/pull/9"},
+      {"repository": "acme/lib", "number": 10},
+      {"host": "github.com", "repository": "acme/lib", "number": "11"},
+      {"host": "github.com", "repository": "not a repo", "number": 12},
+      {"host": "github.com", "repository": "acme/lib", "number": 0},
+      "not an object"
+    ],
+    "linkedPullRequest": {
+      "host": "github.com",
+      "repository": "acme/lib",
+      "number": 13,
+      "url": "https://github.com/acme/lib/pull/13",
+      "watching": true
+    },
+    "settled": false,
+    "updatedAt": "not a time",
+    "someFieldFromTheFuture": {"x": 1}
+  },
+  {
+    "threadId": "thread-unknown-status",
+    "title": "Something new",
+    "status": "hibernating",
+    "pullRequests": [
+      {"host": "github.com", "repository": "acme/app", "number": 109, "url": "https://github.com/acme/app/pull/109", "watching": false}
+    ],
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "threadId": "thread-archived",
+    "title": "Archived",
+    "status": "running",
+    "archivedAt": "2026-11-21T10:00:00.000Z",
+    "pullRequests": [
+      {"host": "github.com", "repository": "acme/app", "number": 110, "url": "https://github.com/acme/app/pull/110", "watching": false}
+    ]
+  },
+  {"threadId": 42, "title": "Bad id", "status": "running", "pullRequests": [{"host": "github.com", "repository": "acme/app", "number": 111}]},
+  {"title": "No id", "status": "running", "pullRequests": [{"host": "github.com", "repository": "acme/app", "number": 112}]},
+  {"threadId": "  ", "status": "running", "pullRequests": [{"host": "github.com", "repository": "acme/app", "number": 113}]},
+  "not a thread",
+  null
+]

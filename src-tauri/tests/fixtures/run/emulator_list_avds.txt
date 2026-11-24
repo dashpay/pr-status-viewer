@@ -1,0 +1,3 @@
+INFO    | Storing crashdata in: /tmp/android-me/emu-crash-35.3.11.db, detection is enabled for process: 4242
+palmatum_api35
+Pixel_9_API_36

@@ -1,0 +1,50 @@
+{
+  "data": {
+    "rateLimit": {
+      "cost": 1
+    },
+    "node": {
+      "reviewThreads": {
+        "totalCount": 48,
+        "pageInfo": {
+          "hasNextPage": false,
+          "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0yMVQxOTo0Njo0OFrOum4y5Q=="
+        },
+        "nodes": [
+          {
+            "id": "PRRT_fixture_6038_40",
+            "isResolved": true
+          },
+          {
+            "id": "PRRT_fixture_6038_41",
+            "isResolved": true
+          },
+          {
+            "id": "PRRT_fixture_6038_42",
+            "isResolved": true
+          },
+          {
+            "id": "PRRT_fixture_6038_43",
+            "isResolved": true
+          },
+          {
+            "id": "PRRT_fixture_6038_44",
+            "isResolved": true
+          },
+          {
+            "id": "PRRT_fixture_6038_45",
+            "isResolved": true
+          },
+          {
+            "id": "PRRT_fixture_6038_46",
+            "isResolved": true
+          },
+          {
+            "id": "PRRT_fixture_6038_47",
+            "isResolved": true
+          }
+        ]
+      }
+    }
+  }
+}

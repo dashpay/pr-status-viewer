@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- PR Status app icon: a pull request branch glyph ending in a check
+       badge, on a rounded square. Solid shapes and heavy strokes so it
+       stays legible at 16 px. Source for `npx tauri icon`; see README. -->
+  <rect x="100" y="100" width="824" height="824" rx="184" fill="#1f5fd1"/>
+  <!-- Base branch: two commits joined by a line. -->
+  <g fill="#ffffff">
+    <circle cx="340" cy="300" r="84"/>
+    <circle cx="340" cy="724" r="84"/>
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-width="76" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="340" y1="300" x2="340" y2="724"/>
+    <!-- Head branch: rises from the badge and points back at the base. -->
+    <path d="M684 560 V410 Q684 300 574 300 H500"/>
+    <polyline points="572,228 500,300 572,372"/>
+  </g>
+  <!-- Check badge: the review verdict. -->
+  <circle cx="676" cy="676" r="176" fill="#1aa260" stroke="#1f5fd1" stroke-width="40"/>
+  <polyline points="594,682 650,738 756,630" fill="none" stroke="#ffffff" stroke-width="68" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

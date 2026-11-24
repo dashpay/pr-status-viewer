@@ -1,0 +1,43 @@
+/* Popup menu: a card of plain text items, placed with fixed top/left inline. */
+.menu {
+  position: fixed;
+  z-index: 40;
+  min-width: 180px;
+  max-width: min(360px, calc(100vw - 8px));
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 6px 20px color-mix(in srgb, var(--foreground) 14%, transparent);
+}
+.menu-item {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  text-align: left;
+  padding: 5px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  cursor: default;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu-item:hover,
+.menu-item:focus-visible { background: var(--hover); }
+.menu-item.danger { color: var(--destructive); }
+.menu-caption {
+  padding: 3px 8px 4px;
+  font-size: 11px;
+  color: var(--dim);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* A choice among several (menuitemradio): a check column before the label. */
+.menu-item.radio { display: flex; align-items: center; gap: 6px; padding-left: 4px; }
+.menu-check { flex: none; width: 12px; text-align: center; font-size: 11px; }
+.menu-sep { height: 1px; margin: 4px 2px; background: var(--border); }

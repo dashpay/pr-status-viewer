@@ -1,0 +1,68 @@
+.follow-link { padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+.follow-link-row { display: flex; gap: 8px; }
+.follow-link-row .input { flex: 1; min-width: 0; }
+.follow-link-row .btn { flex: none; }
+.follow-ok { margin: 0; color: var(--success); font-size: 12px; overflow-wrap: anywhere; }
+
+.follow-list-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px 8px;
+}
+.follow-list-head .input { flex: 1; min-width: 0; }
+.follow-count { flex: none; font-size: 11.5px; font-family: var(--font-mono); }
+.follow-row-error { padding: 0 16px 6px; }
+
+.follow-list {
+  flex: 1 1 auto;
+  min-height: 120px;
+  max-height: 46vh;
+  overflow-y: auto;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.follow-state {
+  margin: 0;
+  padding: 24px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.follow-rows { list-style: none; margin: 0; padding: 0; }
+.follow-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  padding: 7px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.follow-row:last-child { border-bottom: none; }
+.follow-row:hover { background: var(--hover); }
+.follow-main { min-width: 0; }
+.follow-title {
+  font-size: 12.5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.follow-sub {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1px;
+  font-size: 11px;
+  color: var(--dim);
+  white-space: nowrap;
+  overflow: hidden;
+}
+.follow-author { overflow: hidden; text-overflow: ellipsis; }
+.follow-sub .pill { font-size: 10.5px; padding: 0 6px; }
+.follow-toggle { min-width: 84px; }
+.follow-toggle.on { background: var(--secondary); font-weight: 600; }
+.follow-toggle.on::before { content: "✓ "; }
+.follow-yours { min-width: 84px; text-align: center; font-size: 12px; }

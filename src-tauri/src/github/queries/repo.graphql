@@ -1,0 +1,1 @@
+query Repo($owner: String!, $name: String!) { repository(owner: $owner, name: $name) { nameWithOwner } }

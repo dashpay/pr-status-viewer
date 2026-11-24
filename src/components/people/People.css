@@ -1,0 +1,116 @@
+/* The header's person switcher. Shaped like the header's other buttons; it
+   gives up width before the sync status and quick filter do. */
+.people-switch {
+  appearance: none;
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 180px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 26px;
+  padding: 0 7px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  color: var(--foreground);
+  font-size: 11.5px;
+  white-space: nowrap;
+  cursor: default;
+}
+.people-switch:hover,
+.people-switch[aria-expanded="true"] { background: var(--hover); }
+/* Someone else's list: say so with weight, not only colour. */
+.people-switch.other { font-weight: 600; }
+.people-icon,
+.people-caret { flex: none; color: var(--dim); }
+.people-switch-label { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+
+.people-error {
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 200px;
+  color: var(--destructive);
+  font-size: 11.5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* The menu: the check column, the name, the open count. */
+.people-menu { min-width: 200px; }
+.people-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+/* Line actions up with the names, past the check column. */
+.people-action { padding-left: 22px; }
+.people-n { flex: none; margin-left: 12px; color: var(--dim); font-family: var(--font-mono); font-size: 11px; }
+
+/* The "Track contributor" dialog. */
+.track-form { padding-bottom: 12px; }
+.track-row { display: flex; gap: 8px; }
+.track-row .input { flex: 1; min-width: 0; }
+.track-row .btn { flex: none; min-width: 72px; }
+
+.track-known {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  border-top: 1px solid var(--border);
+}
+.track-known-head {
+  margin: 0;
+  padding: 10px 16px 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.track-state {
+  margin: 0;
+  padding: 16px;
+  text-align: center;
+  font-size: 12.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.track-people {
+  list-style: none;
+  margin: 0;
+  padding: 0 8px 4px;
+  max-height: 38vh;
+  overflow-y: auto;
+}
+.track-person {
+  appearance: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 8px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  text-align: left;
+  font-size: 12.5px;
+  cursor: default;
+}
+.track-person:hover:not(:disabled) { background: var(--hover); }
+.track-person:disabled { opacity: 0.6; }
+.track-person[aria-busy="true"] { opacity: 1; }
+.track-person-login { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.track-person-n { flex: none; font-size: 11.5px; }
+
+.track-avatar {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--secondary);
+}
+.track-avatar.letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dim);
+  font-size: 10.5px;
+  font-weight: 600;
+}

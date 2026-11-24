@@ -1,0 +1,20 @@
+/* The filter line under the toolbar: the drafts and created recently
+   switches first, in the same place in every view, then a divider and the
+   milestone chips. */
+.filter-bar {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 4px 10px;
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+  min-width: 0;
+}
+.filter-bar__drafts,
+.filter-bar__recent { flex: none; align-self: flex-start; }
+.filter-bar__drafts + .ms-bar,
+.filter-bar__recent + .ms-bar {
+  border-left: 1px solid var(--border);
+  padding-left: 10px;
+}

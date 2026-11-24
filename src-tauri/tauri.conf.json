@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "PR Status",
+  "version": "0.1.0",
+  "identifier": "org.dash.prstatus",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "PR Status",
+        "width": 1180,
+        "height": 760,
+        "minWidth": 780,
+        "minHeight": 480
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["app", "dmg", "deb", "appimage"],
+    "publisher": "Dash",
+    "copyright": "Copyright (c) 2026 Dash",
+    "license": "MIT",
+    "licenseFile": "../LICENSE",
+    "category": "DeveloperTool",
+    "shortDescription": "Review, CI and time-to-finish status for your GitHub pull requests",
+    "longDescription": "PR Status shows the GitHub pull requests you care about: your open pull requests in the projects you track and the ones you follow. For each it shows the review bot's verdict, how long until its review finishes, the human reviewers and CI.",
+    "icon": [
+      "icons/32x32.png",
+      "icons/64x64.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.png",
+      "icons/icon.icns"
+    ],
+    "macOS": {
+      "minimumSystemVersion": "11.0"
+    },
+    "linux": {
+      "deb": {
+        "depends": ["xdg-utils"],
+        "recommends": ["gh"]
+      }
+    }
+  }
+}

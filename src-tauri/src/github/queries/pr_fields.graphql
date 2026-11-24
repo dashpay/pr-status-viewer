@@ -1,0 +1,50 @@
+fragment PrFields on PullRequest {
+  number
+  title
+  url
+  state
+  isDraft
+  additions
+  deletions
+  createdAt
+  updatedAt
+  headRefOid
+  headRefName
+  isCrossRepository
+  milestone { title }
+  ...MergeFields
+  reviewDecision
+  author { login avatarUrl }
+  assignees(first: 10) { nodes { login } }
+  latestReviews(first: 30) {
+    nodes { state submittedAt author { __typename login avatarUrl } }
+  }
+  reviewRequests(first: 30) {
+    nodes {
+      requestedReviewer {
+        __typename
+        ... on User { login avatarUrl }
+        ... on Bot { login avatarUrl }
+        ... on Mannequin { login avatarUrl }
+        ... on Team { slug organization { login } }
+      }
+    }
+  }
+  commits(last: 1) {
+    nodes {
+      commit {
+        oid
+        statusCheckRollup {
+          contexts(first: 100) {
+            pageInfo { hasNextPage }
+            nodes {
+              __typename
+              ... on CheckRun { name status conclusion title startedAt completedAt }
+              ... on StatusContext { context state description }
+            }
+          }
+        }
+      }
+    }
+  }
+}

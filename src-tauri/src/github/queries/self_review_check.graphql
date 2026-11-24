@@ -1,0 +1,33 @@
+query SelfReviewCheck($owner: String!, $name: String!, $number: Int!) {
+  viewer { login }
+  repository(owner: $owner, name: $name) {
+    pullRequest(number: $number) {
+      id
+      number
+      url
+      state
+      isDraft
+      headRefOid
+      author { login }
+      assignees(first: 10) { nodes { login } }
+      commits(last: 1) {
+        nodes {
+          commit {
+            statusCheckRollup {
+              contexts(first: 100) {
+                nodes {
+                  __typename
+                  ... on CheckRun { name status conclusion title startedAt completedAt }
+                  ... on StatusContext { context state description }
+                }
+              }
+            }
+          }
+        }
+      }
+      comments(last: 50) {
+        nodes { author { __typename login } body createdAt lastEditedAt }
+      }
+    }
+  }
+}

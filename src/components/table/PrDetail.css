@@ -1,0 +1,106 @@
+/* Detail under an open row, in the same tint as the row. */
+.pr-detail {
+  padding: 2px 12px 11px;
+  border-bottom: 1px solid var(--border);
+  background: var(--selected);
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  cursor: default;
+}
+.pr-detail__meter { margin-top: 2px; }
+.pr-detail__note { margin: -3px 0 0; font-size: 11px; color: var(--dim); }
+
+/* Stepper: "✓ Triage —— ● Phase 1 · 0 of 2 lanes —— Verify ——". */
+.pr-steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 11px;
+}
+.pr-step { display: flex; align-items: center; min-width: 0; }
+.pr-step:not(:first-child) { flex: 1 1 auto; }
+.pr-step:not(:first-child)::before {
+  content: "";
+  flex: 1;
+  min-width: 6px;
+  height: 1px;
+  margin: 0 6px;
+  background: var(--border);
+}
+.pr-step__label { white-space: nowrap; }
+.pr-step.done { color: var(--foreground); }
+.pr-step.running { color: var(--info); font-weight: 650; }
+.pr-step.pending { color: var(--dim); }
+.pr-step.failed { color: var(--destructive); font-weight: 650; }
+
+.pr-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin: 0;
+  font-size: 11.5px;
+}
+.pr-fact { display: flex; gap: 4px; min-width: 0; }
+.pr-fact dt { color: var(--dim); white-space: nowrap; }
+.pr-fact dd { margin: 0; font-weight: 600; min-width: 0; }
+/* A plain-weight aside after a fact's value, e.g. which review rounds the findings cover. */
+.pr-fact__note { font-weight: 400; color: var(--dim); }
+
+/* A fact on its own line, for text that can run long. */
+.pr-fact--wide { flex-basis: 100%; }
+/* "Next step  Your move  Bots are done - your move: post /self-reviewed." */
+.pr-next dd { display: flex; flex-wrap: wrap; gap: 0 8px; align-items: baseline; }
+.pr-next__label { white-space: nowrap; }
+.pr-next__detail { font-weight: 400; overflow-wrap: anywhere; }
+
+.pr-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 2px; }
+.pr-actions .btn { padding: 2px 9px; }
+.pr-actions__msg { font-size: 11.5px; }
+
+/* "T3 Code  Fix CI flake working now   Address review waiting, last active 5 min ago · watching this PR" */
+.pr-t3__list { display: flex; flex-wrap: wrap; gap: 2px 14px; margin: 0; padding: 0; list-style: none; }
+.pr-t3__thread { display: flex; gap: 6px; align-items: baseline; min-width: 0; }
+.pr-t3__title { overflow-wrap: anywhere; }
+.pr-t3__state { font-weight: 400; color: var(--dim); white-space: nowrap; }
+.pr-t3__thread.working .pr-t3__state { color: var(--info); font-weight: 600; }
+
+/* Merge sits apart from the everyday actions, with its reason beside it when it cannot run. */
+.pr-merge { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; margin-left: auto; min-width: 0; }
+.pr-merge__btn:not([aria-disabled="true"]) { border-color: var(--info); color: var(--info); font-weight: 600; }
+.pr-merge__btn[aria-disabled="true"] { opacity: 0.5; }
+.pr-merge__btn[aria-disabled="true"]:hover { background: var(--card); }
+.pr-merge__reason { font-size: 11.5px; overflow-wrap: anywhere; }
+
+/* "Traits  🌳 GroveDB change  5 nodes changed  Structure viewer", one trait a line,
+   each link a text button in the link colour, underlined so it reads as a link. */
+.pr-traits__list { display: flex; flex-direction: column; gap: 3px; margin: 0; padding: 0; list-style: none; min-width: 0; }
+.pr-traits__item { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; min-width: 0; }
+.pr-traits__name { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; align-self: center; }
+.pr-traits__name .trait__icon { color: var(--dim); }
+.pr-traits__summary { font-weight: 400; overflow-wrap: anywhere; }
+.pr-traits__links { display: inline-flex; flex-wrap: wrap; gap: 2px 10px; min-width: 0; }
+.pr-traits__link {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--info);
+  font-weight: 500;
+  text-align: left;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--info) 45%, transparent);
+  text-underline-offset: 2px;
+  overflow-wrap: anywhere;
+  cursor: default;
+}
+.pr-traits__link:hover { text-decoration-color: currentColor; }
+.pr-traits__none { font-weight: 400; color: var(--dim); }
+
+/* "Self-review posted 3 min ago, waiting for the gate  [Post again]", or the post button alone. */
+.pr-self-review { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; min-width: 0; }
+.pr-self-review__status { font-size: 11.5px; font-weight: 600; overflow-wrap: anywhere; }

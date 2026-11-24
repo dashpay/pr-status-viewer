@@ -1,0 +1,113 @@
+{
+  "data": {
+    "repository": {
+      "squashMergeAllowed": true,
+      "viewerPermission": "ADMIN",
+      "pullRequest": {
+        "number": 5750,
+        "state": "OPEN",
+        "isDraft": false,
+        "headRefOid": "cff4236bac374011900aef76985bee6b48213e8e",
+        "viewerMergeHeadlineText": "feat(platform)!: random token transfer and mint amounts (#5750)",
+        "id": "PR_kwDOGUlHz88AAAABMo4cwA",
+        "baseRefName": "claude/platform-tenderdash-randomness-149e4e",
+        "mergeable": "MERGEABLE",
+        "mergeStateStatus": "CLEAN",
+        "isMergeQueueEnabled": false,
+        "reviewThreads": {
+          "totalCount": 21,
+          "pageInfo": {
+            "hasNextPage": false,
+            "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0xN1QxMzozNjoxM1rOuHSccw=="
+          },
+          "nodes": [
+            {
+              "id": "PRRT_fixture_merge_check_0",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_1",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_2",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_3",
+              "isResolved": true
+            },
+            {
+              "id": "PRRT_fixture_merge_check_4",
+              "isResolved": false
+            },
+            {
+              "id": "PRRT_fixture_merge_check_5",
+              "isResolved": false
+            },
+            {
+              "id": "PRRT_fixture_merge_check_6",
+              "isResolved": false
+            },
+            {
+              "id": "PRRT_fixture_merge_check_7",
+              "isResolved": false
+            },
+            {
+              "id": "PRRT_fixture_merge_check_8",
+              "isResolved": false
+            },
+            {
+              "id": "PRRT_fixture_merge_check_9",
+              "isResolved": false
+            },
+            {
+              "id": "PRRT_fixture_merge_check_10",
+              "isResolved": false
+            },
+            {
+              "id": "PRRT_fixture_merge_check_11",
+              "isResolved": false
+            },
+            {
+              "id": "PRRT_fixture_merge_check_12",
+              "isResolved": false
+            },
+            {
+              "id": "PRRT_fixture_merge_check_13",
+              "isResolved": false
+            },
+            {
+              "id": "PRRT_fixture_merge_check_14",
+              "isResolved": false
+            },
+            {
+              "id": "PRRT_fixture_merge_check_15",
+              "isResolved": false
+            },
+            {
+              "id": "PRRT_fixture_merge_check_16",
+              "isResolved": false
+            },
+            {
+              "id": "PRRT_fixture_merge_check_17",
+              "isResolved": false
+            },
+            {
+              "id": "PRRT_fixture_merge_check_18",
+              "isResolved": false
+            },
+            {
+              "id": "PRRT_fixture_merge_check_19",
+              "isResolved": false
+            },
+            {
+              "id": "PRRT_fixture_merge_check_20",
+              "isResolved": false
+            }
+          ]
+        }
+      }
+    }
+  }
+}

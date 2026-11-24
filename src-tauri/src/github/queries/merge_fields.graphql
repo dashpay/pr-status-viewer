@@ -1,0 +1,12 @@
+fragment MergeFields on PullRequest {
+  id
+  baseRefName
+  mergeable
+  mergeStateStatus
+  isMergeQueueEnabled
+  reviewThreads(first: 100) {
+    totalCount
+    pageInfo { hasNextPage endCursor }
+    nodes { id isResolved }
+  }
+}

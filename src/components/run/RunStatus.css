@@ -1,0 +1,32 @@
+/* "Running on iOS · Build the SDK" in the header: a quiet button that shows or hides the run panel. */
+.run-status {
+  appearance: none;
+  flex: 0 1 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  max-width: 300px;
+  height: 26px;
+  padding: 0 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  color: var(--foreground);
+  font-size: 11.5px;
+  white-space: nowrap;
+  cursor: default;
+}
+.run-status:hover { background: var(--hover); }
+.run-status[aria-expanded="true"] { background: var(--secondary); }
+.run-status__text { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.run-status__glyph { flex: none; font-weight: 700; }
+.run-status.running { color: var(--info); }
+.run-status.succeeded .run-status__glyph { color: var(--success); }
+.run-status.failed .run-status__glyph { color: var(--destructive); }
+.run-status.cancelled .run-status__glyph { color: var(--dim); }
+.run-status .spinner { flex: none; }
+
+@media (max-width: 960px) {
+  .run-status { max-width: 200px; }
+}

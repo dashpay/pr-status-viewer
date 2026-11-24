@@ -1,0 +1,10 @@
+{
+  "data": {
+    "mergePullRequest": {
+      "pullRequest": {
+        "number": 5750,
+        "state": "MERGED"
+      }
+    }
+  }
+}

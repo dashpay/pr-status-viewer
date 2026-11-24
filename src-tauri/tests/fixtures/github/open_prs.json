@@ -1,0 +1,55 @@
+{
+  "data": {
+    "repository": {
+      "nameWithOwner": "dashpay/platform",
+      "pullRequests": {
+        "pageInfo": {
+          "hasNextPage": true,
+          "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0yMVQxOTozNjo1OFrPAAAAAT6lI6A="
+        },
+        "nodes": [
+          {
+            "number": 6033,
+            "title": "fix(swift-sdk)!: list DPNS contests and query one contest's vote state in SwiftExampleApp",
+            "url": "https://github.com/dashpay/platform/pull/6033",
+            "isDraft": false,
+            "updatedAt": "2026-11-21T19:56:21Z",
+            "author": {
+              "login": "QuantumExplorer"
+            }
+          },
+          {
+            "number": 6038,
+            "title": "feat(platform): prove the state before and after the block of a state transition",
+            "url": "https://github.com/dashpay/platform/pull/6038",
+            "isDraft": false,
+            "updatedAt": "2026-11-21T19:56:11Z",
+            "author": {
+              "login": "QuantumExplorer"
+            }
+          },
+          {
+            "number": 5280,
+            "title": "perf(platform-wallet)!: reuse a recent recorded-anchor set on the shielded spend path",
+            "url": "https://github.com/dashpay/platform/pull/5280",
+            "isDraft": false,
+            "updatedAt": "2026-11-21T19:47:46Z",
+            "author": {
+              "login": "PastaPastaPasta"
+            }
+          },
+          {
+            "number": 5949,
+            "title": "fix(sdk): bump tokio to 1.54.1 and fix the futurelocks it exposes",
+            "url": "https://github.com/dashpay/platform/pull/5949",
+            "isDraft": false,
+            "updatedAt": "2026-11-21T19:36:58Z",
+            "author": {
+              "login": "lklimek"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

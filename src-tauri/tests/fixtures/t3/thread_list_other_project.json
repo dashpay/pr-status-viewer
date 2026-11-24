@@ -1,0 +1,24 @@
+[
+  {
+    "threadId": "thread-waiting",
+    "projectId": "project-2",
+    "title": "Fix the flaky login test (older copy)",
+    "status": "idle",
+    "pullRequests": [
+      {"host": "github.com", "repository": "acme/app", "number": 102, "url": "https://github.com/acme/app/pull/102", "watching": false}
+    ],
+    "settled": false,
+    "updatedAt": "2026-11-22T11:00:00.000Z"
+  },
+  {
+    "threadId": "thread-lib",
+    "projectId": "project-2",
+    "title": "Speed up the lib build",
+    "status": "running",
+    "pullRequests": [
+      {"host": "github.com", "repository": "acme/lib", "number": 20, "url": "https://github.com/acme/lib/pull/20", "watching": true}
+    ],
+    "settled": false,
+    "updatedAt": "2026-11-22T12:40:00.000Z"
+  }
+]

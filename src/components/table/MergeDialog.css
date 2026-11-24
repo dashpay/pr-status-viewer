@@ -1,0 +1,45 @@
+/* Squash-merge confirmation: facts, then a blocking reason or the warnings. */
+.merge-dialog { gap: 10px; font-size: 12.5px; }
+.merge-dialog__status { margin: 0; }
+
+.merge-dialog__facts {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 4px 12px;
+  margin: 0;
+}
+.merge-dialog__facts > div { display: contents; }
+.merge-dialog__facts dt { color: var(--dim); }
+.merge-dialog__facts dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+
+.merge-dialog__blocked {
+  margin: 0;
+  padding: 6px 9px;
+  border-radius: var(--radius-sm);
+  background: var(--secondary);
+  overflow-wrap: anywhere;
+}
+.merge-dialog__blocked-label { font-weight: 650; }
+
+.merge-dialog__warnings {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.merge-dialog__warnings li { display: flex; gap: 7px; align-items: baseline; }
+.merge-dialog__warn-mark {
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-sm);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--warning);
+  background: color-mix(in srgb, var(--warning) 15%, transparent);
+  transform: translateY(1px);
+}

@@ -1,0 +1,14 @@
+query MergeCheck($owner: String!, $name: String!, $number: Int!) {
+  repository(owner: $owner, name: $name) {
+    squashMergeAllowed
+    viewerPermission
+    pullRequest(number: $number) {
+      number
+      state
+      isDraft
+      headRefOid
+      viewerMergeHeadlineText(mergeType: SQUASH)
+      ...MergeFields
+    }
+  }
+}

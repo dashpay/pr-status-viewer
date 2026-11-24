@@ -1,0 +1,300 @@
+{
+  "data": {
+    "rateLimit": {
+      "cost": 1
+    },
+    "repository": {
+      "pr6041": {
+        "number": 6041,
+        "title": "ci: let PR Hygiene post its verdicts to the dashboard",
+        "url": "https://github.com/dashpay/platform/pull/6041",
+        "state": "OPEN",
+        "isDraft": false,
+        "additions": 1,
+        "deletions": 0,
+        "createdAt": "2026-11-21T15:00:26Z",
+        "updatedAt": "2026-11-21T16:00:41Z",
+        "headRefOid": "39dba09c717a065949849349981b0de45582486e",
+        "headRefName": "ci/hygiene-dashboard",
+        "isCrossRepository": false,
+        "id": "PR_kwDOGUlHz88AAAABQ5qwSA",
+        "baseRefName": "v6.0-dev",
+        "mergeable": "MERGEABLE",
+        "mergeStateStatus": "BEHIND",
+        "isMergeQueueEnabled": false,
+        "reviewThreads": {
+          "totalCount": 1,
+          "pageInfo": {
+            "hasNextPage": false,
+            "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0yMVQxNTo1OTozN1rOumLoeg=="
+          },
+          "nodes": [
+            {
+              "id": "PRRT_fixture_6041_0",
+              "isResolved": true
+            }
+          ]
+        },
+        "reviewDecision": null,
+        "author": {
+          "login": "shumkov",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/24296?u=63897af0adb078ed7f42cb9084cfce2c131aa20c&v=4"
+        },
+        "latestReviews": {
+          "nodes": [
+            {
+              "state": "APPROVED",
+              "submittedAt": "2026-11-21T15:59:37Z",
+              "author": {
+                "__typename": "User",
+                "login": "thepastaclaw",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/261708734?u=8d161150d4d4e6970aed3ae493551da8751970df&v=4"
+              }
+            }
+          ]
+        },
+        "reviewRequests": {
+          "nodes": []
+        },
+        "commits": {
+          "nodes": [
+            {
+              "commit": {
+                "oid": "39dba09c717a065949849349981b0de45582486e",
+                "statusCheckRollup": {
+                  "contexts": {
+                    "pageInfo": {
+                      "hasNextPage": false
+                    },
+                    "nodes": [
+                      {
+                        "__typename": "CheckRun",
+                        "name": "assign-milestone",
+                        "status": "COMPLETED",
+                        "conclusion": "SUCCESS",
+                        "title": null,
+                        "startedAt": "2026-11-21T15:00:32Z",
+                        "completedAt": "2026-11-21T15:00:36Z"
+                      },
+                      {
+                        "__typename": "CheckRun",
+                        "name": "Build JS packages",
+                        "status": "COMPLETED",
+                        "conclusion": "SKIPPED",
+                        "title": null,
+                        "startedAt": "2026-11-21T15:15:26Z",
+                        "completedAt": "2026-11-21T15:15:26Z"
+                      },
+                      {
+                        "__typename": "StatusContext",
+                        "context": "PR Hygiene",
+                        "state": "PENDING",
+                        "description": "waiting-build: Waiting for required checks to finish."
+                      },
+                      {
+                        "__typename": "StatusContext",
+                        "context": "CodeRabbit",
+                        "state": "SUCCESS",
+                        "description": "Review completed"
+                      },
+                      {
+                        "__typename": "CheckRun",
+                        "name": "PastaClaw review",
+                        "status": "COMPLETED",
+                        "conclusion": "SUCCESS",
+                        "title": "Approved",
+                        "startedAt": "2026-11-21T15:37:30Z",
+                        "completedAt": "2026-11-21T15:59:38Z"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "pr6036": {
+        "number": 6036,
+        "title": "refactor(platform-wallet-ffi)!: drop the always-zero balance from Core",
+        "url": "https://github.com/dashpay/platform/pull/6036",
+        "state": "OPEN",
+        "isDraft": true,
+        "additions": 20,
+        "deletions": 55,
+        "createdAt": "2026-11-21T11:27:16Z",
+        "updatedAt": "2026-11-21T11:44:36Z",
+        "headRefOid": "3945502709429324e6b5aebba7648ac22187e057",
+        "headRefName": "v6.0-dev",
+        "isCrossRepository": true,
+        "id": "PR_kwDOGUlHz88AAAABQ35zgw",
+        "baseRefName": "fix/funding-pool-lost-row-in-window",
+        "mergeable": "MERGEABLE",
+        "mergeStateStatus": "UNSTABLE",
+        "isMergeQueueEnabled": false,
+        "reviewThreads": {
+          "totalCount": 0,
+          "pageInfo": {
+            "hasNextPage": false,
+            "endCursor": null
+          },
+          "nodes": []
+        },
+        "reviewDecision": null,
+        "author": {
+          "login": "Claudius-Maginificent",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/8431764?u=208635b4ef3388f991e3ccd0534aede403127e4c&v=4"
+        },
+        "latestReviews": {
+          "nodes": []
+        },
+        "reviewRequests": {
+          "nodes": []
+        },
+        "commits": {
+          "nodes": [
+            {
+              "commit": {
+                "oid": "3945502709429324e6b5aebba7648ac22187e057",
+                "statusCheckRollup": {
+                  "contexts": {
+                    "pageInfo": {
+                      "hasNextPage": false
+                    },
+                    "nodes": [
+                      {
+                        "__typename": "CheckRun",
+                        "name": "PR title",
+                        "status": "COMPLETED",
+                        "conclusion": "FAILURE",
+                        "title": null,
+                        "startedAt": "2026-11-21T11:27:25Z",
+                        "completedAt": "2026-11-21T11:27:29Z"
+                      },
+                      {
+                        "__typename": "CheckRun",
+                        "name": "assign-milestone",
+                        "status": "COMPLETED",
+                        "conclusion": "SUCCESS",
+                        "title": null,
+                        "startedAt": "2026-11-21T11:27:26Z",
+                        "completedAt": "2026-11-21T11:27:31Z"
+                      },
+                      {
+                        "__typename": "StatusContext",
+                        "context": "action-semantic-pull-request",
+                        "state": "PENDING",
+                        "description": "PR title validation failed"
+                      },
+                      {
+                        "__typename": "StatusContext",
+                        "context": "CodeRabbit",
+                        "state": "SUCCESS",
+                        "description": "Review completed"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "pr5000": {
+        "number": 5000,
+        "title": "fix(drive-abci)!: refuse a token mint or direct purchase past the i64:",
+        "url": "https://github.com/dashpay/platform/pull/5000",
+        "state": "MERGED",
+        "isDraft": false,
+        "additions": 651,
+        "deletions": 45,
+        "createdAt": "2026-09-25T19:48:43Z",
+        "updatedAt": "2026-09-25T20:02:58Z",
+        "headRefOid": "b9f19780399bd53e585a72f4c29a0798be10ae7e",
+        "id": "PR_kwDOGUlHz85MERGED",
+        "baseRefName": "v1.0-dev",
+        "mergeable": "UNKNOWN",
+        "mergeStateStatus": "UNKNOWN",
+        "isMergeQueueEnabled": false,
+        "reviewThreads": {
+          "totalCount": 0,
+          "pageInfo": {
+            "hasNextPage": false,
+            "endCursor": "Y3Vyc29yOnYyOpK0MjAyNi0xMS0yMVQxOTo0Njo0OFrOum4y5Q=="
+          },
+          "nodes": []
+        },
+        "reviewDecision": "REVIEW_REQUIRED",
+        "author": {
+          "login": "QuantumExplorer",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/11468583?u=930727883cf15f471e6c4d991d4b39af08738eb2&v=4"
+        },
+        "latestReviews": {
+          "nodes": []
+        },
+        "reviewRequests": {
+          "nodes": []
+        },
+        "commits": {
+          "nodes": [
+            {
+              "commit": {
+                "oid": "b9f19780399bd53e585a72f4c29a0798be10ae7e",
+                "statusCheckRollup": {
+                  "contexts": {
+                    "pageInfo": {
+                      "hasNextPage": false
+                    },
+                    "nodes": [
+                      {
+                        "__typename": "CheckRun",
+                        "name": "assign-milestone",
+                        "status": "COMPLETED",
+                        "conclusion": "SUCCESS",
+                        "title": null,
+                        "startedAt": "2026-09-25T20:00:37Z",
+                        "completedAt": "2026-09-25T20:00:41Z"
+                      },
+                      {
+                        "__typename": "CheckRun",
+                        "name": "Build Docker images",
+                        "status": "COMPLETED",
+                        "conclusion": "SKIPPED",
+                        "title": null,
+                        "startedAt": "2026-09-25T20:01:14Z",
+                        "completedAt": "2026-09-25T20:01:13Z"
+                      },
+                      {
+                        "__typename": "StatusContext",
+                        "context": "CodeRabbit",
+                        "state": "SUCCESS",
+                        "description": "Review completed"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "pr99999999": null
+    }
+  },
+  "errors": [
+    {
+      "type": "NOT_FOUND",
+      "path": [
+        "repository",
+        "pr99999999"
+      ],
+      "locations": [
+        {
+          "line": 1,
+          "column": 242
+        }
+      ],
+      "message": "Could not resolve to a PullRequest with the number of 99999999."
+    }
+  ]
+}

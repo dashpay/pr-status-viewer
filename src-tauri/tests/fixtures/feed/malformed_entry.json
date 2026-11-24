@@ -1,0 +1,17 @@
+{
+  "data_as_of": "2026-11-21T20:06:01Z",
+  "live": {
+    "active": [
+      {"repo": "owner/good-one", "number": 1, "sha": "abc", "phase": "phase1", "progress": 0.5, "remaining_seconds": 120},
+      {"repo": "owner/broken", "number": "not a number"},
+      "just a string",
+      {"repo": "owner/good-two", "number": 2, "sha": null, "phase": "phase2", "progress": "half", "remaining_seconds": null, "steps": [{"name": "phase1", "status": "ok"}, 42, {"status": "running"}], "findings": {"blocking": "x"}}
+    ],
+    "queued": [
+      {"repo": "owner/q", "number": 5, "position": 1, "eligible_in_seconds": 60.5},
+      {"number": 6},
+      null
+    ]
+  },
+  "rounds": {"watch": [{"repo": "owner/good-one", "number": 1, "rounds": 3}, {"repo": "owner/x"}]}
+}

@@ -1,0 +1,20 @@
+{
+  "data": {
+    "repository": null
+  },
+  "errors": [
+    {
+      "type": "NOT_FOUND",
+      "path": [
+        "repository"
+      ],
+      "locations": [
+        {
+          "line": 1,
+          "column": 47
+        }
+      ],
+      "message": "Could not resolve to a Repository with the name 'dashpay/does-not-exist-xyz'."
+    }
+  ]
+}

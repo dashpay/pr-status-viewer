@@ -1,0 +1,48 @@
+[package]
+name = "pr-status-viewer"
+version = "0.1.0"
+description = "A GitHub pull request viewer that shows review status and time to finish"
+authors = ["QuantumExplorer"]
+license = "MIT"
+edition = "2024"
+
+[lib]
+# The `_lib` suffix keeps the lib name distinct from the bin name.
+name = "pr_status_viewer_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-opener = "2"
+# The system folder picker, for choosing a project's local clone.
+tauri-plugin-dialog = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "time", "process", "fs"] }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "gzip"] }
+chrono = { version = "0.4", default-features = false, features = ["std", "clock", "serde"] }
+thiserror = "2"
+log = "0.4"
+# Reads T3 Code's project list from its database (read-only). `bundled` compiles SQLite
+# in, so there is no system library to install on Linux.
+rusqlite = { version = "0.43", features = ["bundled"] }
+
+[target.'cfg(unix)'.dependencies]
+# Signals a build's whole process group when a run is cancelled.
+libc = "0.2"
+
+[dev-dependencies]
+tempfile = "3"
+pretty_assertions = "1"
+tokio = { version = "1", features = ["test-util"] }
+
+[profile.release]
+# No `panic = "abort"`: the sync engine isolates each source in its own task and
+# relies on a panic there being caught, in release builds too.
+codegen-units = 1
+lto = true
+opt-level = 3
+strip = true

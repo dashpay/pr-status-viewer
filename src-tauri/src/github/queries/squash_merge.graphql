@@ -1,0 +1,5 @@
+mutation SquashMerge($id: ID!, $head: GitObjectID!) {
+  mergePullRequest(input: { pullRequestId: $id, mergeMethod: SQUASH, expectedHeadOid: $head }) {
+    pullRequest { number state }
+  }
+}

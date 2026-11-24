@@ -1,0 +1,221 @@
+{
+  "data": {
+    "rateLimit": {
+      "cost": 1
+    },
+    "p0": {
+      "number": 6056,
+      "headRefOid": "4dd9ab0c3051534db0feffa32d1d8bde98413d7a",
+      "bot": {
+        "nodes": [
+          {
+            "databaseId": 6012025912,
+            "submittedAt": "2026-11-22T11:41:38Z",
+            "commit": {
+              "oid": "9363df29b4fcc7cadda0b27b418cc71e201b69f6"
+            },
+            "body": "<!-- thepastaclaw-review v1 -->\n<!-- thepastaclaw-review-phase v1 phase=final sha=9363df29b4fcc7cadda0b27b418cc71e201b69f6 policy=45e4063a411d5823 -->\n## Final validation — Phase 1 + Phase 2\n\nThe new mobile reads use the existing proof-verified SDK paths without changing consensus or storage, but the bindings can broaden explicit requests or lose kept values, and the example app can display verified results under the wrong inputs. Rust workspace and wasm32 checks passed; Swift SDK build and tests were pending at the time of this static review. Three lower-priority findings were omitted under the 10-comment budget.\n\n🔴 5 blocking | 🟡 5 suggestion(s)\n"
+          }
+        ]
+      },
+      "rabbit": {
+        "nodes": []
+      },
+      "reviewThreads": {
+        "pageInfo": {
+          "hasNextPage": false,
+          "endCursor": null
+        },
+        "nodes": [
+          {
+            "id": "PRRT_kwDOGUlHz866jTRZ",
+            "isResolved": true,
+            "comments": {
+              "nodes": [
+                {
+                  "databaseId": 4657936610,
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "pullRequestReview": {
+                    "databaseId": 6012025912
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=14a0e8ec6dca dedupe=0c23aca89453ab10 -->\n**🔴 Blocking: Preserve explicit query inputs and let rs-sdk resolve defaults**"
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_kwDOGUlHz866jTRd",
+            "isResolved": true,
+            "comments": {
+              "nodes": [
+                {
+                  "databaseId": 4657936614,
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "pullRequestReview": {
+                    "databaseId": 6012025912
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=4c0aeaec90e8 dedupe=38832256b03436c7 -->\n**🔴 Blocking: Require a contract proof at least as recent as the removals proof**"
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_kwDOGUlHz866jTRf",
+            "isResolved": true,
+            "comments": {
+              "nodes": [
+                {
+                  "databaseId": 4657936616,
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "pullRequestReview": {
+                    "databaseId": 6012025912
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=902cb5db3168 dedupe=937dfc4eee23556d -->\n**🔴 Blocking: Label moderation status with the identity that was queried**"
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_kwDOGUlHz866jTRh",
+            "isResolved": true,
+            "comments": {
+              "nodes": [
+                {
+                  "databaseId": 4657936618,
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "pullRequestReview": {
+                    "databaseId": 6012025912
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=31d80aae8084 dedupe=ffed36b105350ede -->\n**🔴 Blocking: Keep superseded reads from changing moderation pages**"
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_kwDOGUlHz866jTRk",
+            "isResolved": true,
+            "comments": {
+              "nodes": [
+                {
+                  "databaseId": 4657936622,
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "pullRequestReview": {
+                    "databaseId": 6012025912
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=62092fe2dffe dedupe=98b1e35490c3204c -->\n**🔴 Blocking: Preserve floating-point kept values across the Swift bridge**"
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_kwDOGUlHz866jTRo",
+            "isResolved": true,
+            "comments": {
+              "nodes": [
+                {
+                  "databaseId": 4657936626,
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "pullRequestReview": {
+                    "databaseId": 6012025912
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=3477fd3d7851 dedupe=c8d80fca7c26f07d -->\n**🟡 Suggestion: Document protocol 14 as the minimum for these reads**"
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_kwDOGUlHz866jTRr",
+            "isResolved": true,
+            "comments": {
+              "nodes": [
+                {
+                  "databaseId": 4657936630,
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "pullRequestReview": {
+                    "databaseId": 6012025912
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=c89fd5f64cc5 dedupe=aa108217acdda5b3 -->\n**🟡 Suggestion: Test a successful moderation read through the exported C ABI**"
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_kwDOGUlHz866jTRs",
+            "isResolved": true,
+            "comments": {
+              "nodes": [
+                {
+                  "databaseId": 4657936631,
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "pullRequestReview": {
+                    "databaseId": 6012025912
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=b03aa7a3759e dedupe=0ad8dd94cc9cc215 -->\n**🟡 Suggestion: Show the warning history returned for each warning-list entry**"
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_kwDOGUlHz866jTRt",
+            "isResolved": true,
+            "comments": {
+              "nodes": [
+                {
+                  "databaseId": 4657936634,
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "pullRequestReview": {
+                    "databaseId": 6012025912
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=1c98d56f385e dedupe=9c5346d37c822f6b -->\n**🟡 Suggestion: Distinguish fee-pot claims from automatic settlements**"
+                }
+              ]
+            }
+          },
+          {
+            "id": "PRRT_kwDOGUlHz866jTRv",
+            "isResolved": true,
+            "comments": {
+              "nodes": [
+                {
+                  "databaseId": 4657936636,
+                  "author": {
+                    "login": "thepastaclaw"
+                  },
+                  "pullRequestReview": {
+                    "databaseId": 6012025912
+                  },
+                  "body": "<!-- thepastaclaw-review v1 finding=5ccd97e46f9a dedupe=d37383b4da5384b4 -->\n**🟡 Suggestion: Return both parts of the Rust team-action continuation**"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "comments": {
+        "pageInfo": {
+          "hasNextPage": false,
+          "endCursor": null
+        },
+        "nodes": []
+      }
+    }
+  }
+}
